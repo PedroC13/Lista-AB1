@@ -1,3 +1,4 @@
+import pandas as pd
 
 class Node:
     def __init__(self, atribute = None, classify = None):
