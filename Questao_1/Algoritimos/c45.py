@@ -12,64 +12,64 @@ class c45:
 
     def fit(self, target: str):
         self.target = target
-        atributos = [c for c in self.df.columns if c != target]
-        self.root = self.build_tree(self.df, atributos)
+        attributes = [c for c in self.df.columns if c != target]
+        self.root = self.build_tree(self.df, attributes)
         return self.root
 
-    def _registrar(self, texto: str) -> None:
+    def _record(self, text: str) -> None:
         if self.verbose:
-            self.log.append(texto)
+            self.log.append(text)
 
-    def _montar_prova(self, node_label: str, df: pd.DataFrame, impureza: float, gains: dict, escolhido: str) -> None:
+    def _build_proof_box(self, node_label: str, df: pd.DataFrame, impurity: float, gains: dict, chosen: str) -> None:
         classes = df[self.target]
-        contagem = classes.value_counts()
-        exemplos = [f"E{i + 1}" for i in df.index]
+        counts = classes.value_counts()
+        examples = [f"E{i + 1}" for i in df.index]
 
-        linhas = []
-        linhas.append(f"┌{'─' * 60}┐")
-        linhas.append(f"│ NÓ: {node_label}")
-        linhas.append(f"│ Exemplos: n={len(df)}  [{', '.join(exemplos)}]")
-        linhas.append(f"│ Classes: " + " | ".join(f"{c}={n}" for c, n in contagem.items()))
-        linhas.append("│")
-        linhas.append(f"│ Entropia do conjunto: {impureza:.4f}")
-        linhas.append("│")
-        linhas.append("│ Ganho de Razão por atributo:")
+        lines = []
+        lines.append(f"┌{'─' * 60}┐")
+        lines.append(f"│ NÓ: {node_label}")
+        lines.append(f"│ Exemplos: n={len(df)}  [{', '.join(examples)}]")
+        lines.append(f"│ Classes: " + " | ".join(f"{c}={n}" for c, n in counts.items()))
+        lines.append("│")
+        lines.append(f"│ Entropia do conjunto: {impurity:.4f}")
+        lines.append("│")
+        lines.append("│ Ganho de Razão por atributo:")
         for attr, gain in gains.items():
-            pontos = "." * max(1, 30 - len(attr))
-            linhas.append(f"│   {attr} {pontos} {gain:.4f}")
-        linhas.append("│")
-        linhas.append(f"│ ► Atributo escolhido: {escolhido.upper()} (maior ganho)")
-        linhas.append(f"└{'─' * 60}┘")
+            dots = "." * max(1, 30 - len(attr))
+            lines.append(f"│   {attr} {dots} {gain:.4f}")
+        lines.append("│")
+        lines.append(f"│ ► Atributo escolhido: {chosen.upper()} (maior ganho)")
+        lines.append(f"└{'─' * 60}┘")
 
-        self._registrar("\n".join(linhas))
+        self._record("\n".join(lines))
 
-    def predict(self, linha, no: Node = None):
-        if no is None:
-            no = self.root
+    def predict(self, row, node: Node = None):
+        if node is None:
+            node = self.root
 
-        if no.is_leaf():
-            return no.classe
+        if node.is_leaf():
+            return node.label
 
-        valor = linha[no.atributo]
-        if valor not in no.filhos:
+        value = row[node.attribute]
+        if value not in node.children:
             return self.df[self.target].mode()[0]
 
-        return self.predict(linha, no.filhos[valor])
+        return self.predict(row, node.children[value])
 
     def classify_dataset(self, df: pd.DataFrame = None, filepath: str = None) -> pd.DataFrame:
         """Classifica a base e retorna (real x predito), pronto para avaliação (ex: f-score)."""
         if df is None:
             df = self.df
 
-        resultado = pd.DataFrame({
+        result = pd.DataFrame({
             "Real": df[self.target],
             "Predito": df.apply(self.predict, axis=1),
         })
 
         if filepath:
-            resultado.to_csv(filepath, index=False)
+            result.to_csv(filepath, index=False)
 
-        return resultado
+        return result
 
     def calc_general_entropy(self, df: pd.DataFrame = None) -> float:
         if df is None:
@@ -79,7 +79,7 @@ class c45:
         probability = values / values.sum()
         entropy = -sum(probability * np.log2(probability))
 
-        self._registrar(f"Entropia do conjunto atual (n={len(df)}): {entropy:.4f}")
+        self._record(f"Entropia do conjunto atual (n={len(df)}): {entropy:.4f}")
 
         return entropy
 
@@ -91,7 +91,7 @@ class c45:
         counting = df.groupby(attribute)[self.target].value_counts()
         total = len(df)
 
-        self._registrar(f"--- \n Calculando entropia para o atributo: '{attribute}' ---")
+        self._record(f"--- \n Calculando entropia para o atributo: '{attribute}' ---")
 
         entropy_weighted_sum = 0
 
@@ -104,9 +104,9 @@ class c45:
             entropy = -sum(probability * np.log2(probability))
             entropy_weighted_sum += entropy * weight
 
-            self._registrar(f"  Valor '{group}': n={quantity}, entropia={entropy:.4f}, peso={weight:.4f}")
+            self._record(f"  Valor '{group}': n={quantity}, entropia={entropy:.4f}, peso={weight:.4f}")
 
-        self._registrar(f"  => Entropia média ponderada de '{attribute}': {entropy_weighted_sum:.4f}")
+        self._record(f"  => Entropia média ponderada de '{attribute}': {entropy_weighted_sum:.4f}")
 
         return entropy_weighted_sum
 
@@ -132,7 +132,7 @@ class c45:
         split_info = self.calc_split_info(attribute, df)
         gain_ratio = gain / split_info if split_info != 0 else 0
 
-        self._registrar(f"  => Ganho de '{attribute}': {gain:.4f}, Split Info: {split_info:.4f}, Ganho de Razão: {gain_ratio:.4f}\n")
+        self._record(f"  => Ganho de '{attribute}': {gain:.4f}, Split Info: {split_info:.4f}, Ganho de Razão: {gain_ratio:.4f}\n")
 
         return gain_ratio
 
@@ -142,68 +142,68 @@ class c45:
 
         gains = {attr: self.calc_gain_ratio(attr, df) for attr in attributes}
 
-        self._registrar("Ganhos de Razão calculados:")
+        self._record("Ganhos de Razão calculados:")
         for attr, gain in gains.items():
-            self._registrar(f"  {attr}: {gain:.4f}")
+            self._record(f"  {attr}: {gain:.4f}")
 
-        escolhido = max(gains, key=gains.get)
+        chosen = max(gains, key=gains.get)
 
-        self._registrar(f"=> Atributo escolhido: '{escolhido}'\n")
+        self._record(f"=> Atributo escolhido: '{chosen}'\n")
 
-        return escolhido, gains
+        return chosen, gains
 
-    def build_tree(self, df: pd.DataFrame, attributes: list, depth: int = 0, origem: str = "Raiz") -> Node:
+    def build_tree(self, df: pd.DataFrame, attributes: list, depth: int = 0, origin: str = "Raiz") -> Node:
         classes = df[self.target]
 
         # Caso 1: todos os exemplos são da mesma classe -> folha
         if classes.nunique() == 1:
-            self._registrar("  " * depth + f"[Folha] Classe única: {classes.iloc[0]}")
-            return Node(classe=classes.iloc[0])
+            self._record("  " * depth + f"[Folha] Classe única: {classes.iloc[0]}")
+            return Node(label=classes.iloc[0])
 
         # Caso 2: não sobraram atributos -> folha com classe majoritária
         if len(attributes) == 0:
-            majoritaria = classes.mode()[0]
-            self._registrar("  " * depth + f"[Folha] Sem atributos restantes. Classe majoritária: {majoritaria}")
-            return Node(classe=majoritaria)
+            majority_class = classes.mode()[0]
+            self._record("  " * depth + f"[Folha] Sem atributos restantes. Classe majoritária: {majority_class}")
+            return Node(label=majority_class)
 
-        escolhido, gains = self.best_attribute(attributes, df)
-        no = Node(atributo=escolhido)
+        chosen, gains = self.best_attribute(attributes, df)
+        node = Node(attribute=chosen)
 
-        self._registrar("  " * depth + f"[Nó] Dividindo por: '{escolhido}'")
-        self._montar_prova(origem, df, self.calc_general_entropy(df), gains, escolhido)
+        self._record("  " * depth + f"[Nó] Dividindo por: '{chosen}'")
+        self._build_proof_box(origin, df, self.calc_general_entropy(df), gains, chosen)
 
-        atributos_restantes = [a for a in attributes if a != escolhido]
+        remaining_attributes = [a for a in attributes if a != chosen]
 
-        for valor in df[escolhido].unique():
-            subgrupo = df[df[escolhido] == valor]
+        for value in df[chosen].unique():
+            subgroup = df[df[chosen] == value]
 
-            if len(subgrupo) == 0:
-                majoritaria = classes.mode()[0]
-                no.filhos[valor] = Node(classe=majoritaria)
+            if len(subgroup) == 0:
+                majority_class = classes.mode()[0]
+                node.children[value] = Node(label=majority_class)
             else:
-                self._registrar("  " * (depth + 1) + f"-> Valor '{valor}' (n={len(subgrupo)})")
-                novo_origem = f"Ramo \"{valor}\" → nível {depth + 1}"
-                no.filhos[valor] = self.build_tree(subgrupo, atributos_restantes, depth + 1, novo_origem)
+                self._record("  " * (depth + 1) + f"-> Valor '{value}' (n={len(subgroup)})")
+                new_origin = f"Ramo \"{value}\" → nível {depth + 1}"
+                node.children[value] = self.build_tree(subgroup, remaining_attributes, depth + 1, new_origin)
 
-        return no
+        return node
 
-    def _arvore_texto(self, no: Node = None, depth: int = 0, linhas: list = None) -> list:
-        raiz = linhas is None
-        if raiz:
-            linhas = []
-        if no is None:
-            no = self.root
+    def _tree_text(self, node: Node = None, depth: int = 0, lines: list = None) -> list:
+        is_root = lines is None
+        if is_root:
+            lines = []
+        if node is None:
+            node = self.root
 
-        prefixo = "  " * depth
-        if no.is_leaf():
-            linhas.append(f"{prefixo}[Folha] Classe: {no.classe}")
+        prefix = "  " * depth
+        if node.is_leaf():
+            lines.append(f"{prefix}[Folha] Classe: {node.label}")
         else:
-            linhas.append(f"{prefixo}[Nó] Atributo: {no.atributo}")
-            for valor, filho in no.filhos.items():
-                linhas.append(f"{prefixo}  -> Valor '{valor}':")
-                self._arvore_texto(filho, depth + 2, linhas)
+            lines.append(f"{prefix}[Nó] Atributo: {node.attribute}")
+            for value, child in node.children.items():
+                lines.append(f"{prefix}  -> Valor '{value}':")
+                self._tree_text(child, depth + 2, lines)
 
-        return linhas
+        return lines
 
     def export_tree(self, filepath: str) -> None:
         """Escreve toda a saída (log detalhado + árvore final) em um único arquivo de texto.
@@ -212,14 +212,14 @@ class c45:
         if not self.verbose:
             return
 
-        conteudo = []
-        conteudo.append("===== LOG DE CONSTRUÇÃO (C4.5) =====\n")
-        conteudo.extend(self.log)
-        conteudo.append("\n===== ÁRVORE FINAL (C4.5) =====\n")
-        conteudo.extend(self._arvore_texto())
+        content = []
+        content.append("===== LOG DE CONSTRUÇÃO (C4.5) =====\n")
+        content.extend(self.log)
+        content.append("\n===== ÁRVORE FINAL (C4.5) =====\n")
+        content.extend(self._tree_text())
 
         with open(filepath, "w", encoding="utf-8") as f:
-            f.write("\n".join(conteudo))
+            f.write("\n".join(content))
 
     def export_pure_tree(self, filepath: str = None) -> str:
         """Gera apenas a árvore em texto (sem o log de construção).
@@ -227,10 +227,10 @@ class c45:
         Útil como uma das 3 formas de saída/entrada do pipeline: (1) log completo
         via export_tree, (2) árvore pura via este método, (3) csv de predições
         via classify_dataset."""
-        texto = "\n".join(self._arvore_texto())
+        text = "\n".join(self._tree_text())
 
         if filepath:
             with open(filepath, "w", encoding="utf-8") as f:
-                f.write(texto)
+                f.write(text)
 
-        return texto
+        return text

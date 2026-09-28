@@ -1,10 +1,10 @@
 import pandas as pd
 
 class Node:
-    def __init__(self, atributo = None, classe = None):
-        self.atributo = atributo
-        self.classe = classe
-        self.filhos = {}
+    def __init__(self, attribute=None, label=None):
+        self.attribute = attribute
+        self.label = label
+        self.children = {}
 
     def is_leaf(self):
-        return self.atributo is None
+        return self.attribute is None
