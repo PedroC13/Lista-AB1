@@ -1,15 +1,15 @@
 import pandas as pd
-from id3 import id3
 from c45 import c45
 from cart import cart
+from id3 import id3
 
 # Tratamento incial dos dados
-original_data = pd.read_csv("base_credito_original.csv")
+original_data = pd.read_csv("database.csv")
 
 #removendo coluna desnessesária exemplo
 original_data = original_data.drop(columns=["Exemplo"])
 
-original_data.to_csv("base_credito_tratada.csv", index=False)
+original_data.to_csv("outputs/database_tratada.csv", index=False)
 
 arvore_id3 = id3(original_data, verbose=True)
 arvore_id3.fit("Risco")
