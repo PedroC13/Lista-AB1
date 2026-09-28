@@ -52,7 +52,7 @@ def remove_rule(base):
 def menu():
     base_path = choose_base()
     base = KnowledgeBase.load(base_path)
-    engine = InferenceEngine(base)  # acumula fatos/trilha durante toda a sessão
+    engine = InferenceEngine(base)  # acumula fatos/trilhas durante toda a sessão
 
     while True:
         print("""
