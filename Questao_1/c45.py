@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from node import Node
 
-class id3:
+class c45:
     def __init__(self, df: pd.DataFrame, verbose: bool = False) -> None:
         self.df = df
         self.verbose = verbose
@@ -33,7 +33,7 @@ class id3:
         linhas.append("│")
         linhas.append(f"│ Entropia do conjunto: {impureza:.4f}")
         linhas.append("│")
-        linhas.append("│ Ganho de Informação por atributo:")
+        linhas.append("│ Ganho de Razão por atributo:")
         for attr, gain in gains.items():
             pontos = "." * max(1, 30 - len(attr))
             linhas.append(f"│   {attr} {pontos} {gain:.4f}")
@@ -110,7 +110,18 @@ class id3:
 
         return entropy_weighted_sum
 
-    def calc_entropy_gain(self, attribute: str, df: pd.DataFrame = None) -> float:
+    def calc_split_info(self, attribute: str, df: pd.DataFrame = None) -> float:
+        """Entropia da distribuição dos exemplos entre os valores do atributo (usada para normalizar o ganho)."""
+        if df is None:
+            df = self.df
+
+        values = df[attribute].value_counts()
+        probability = values / values.sum()
+        split_info = -sum(probability * np.log2(probability))
+
+        return split_info
+
+    def calc_gain_ratio(self, attribute: str, df: pd.DataFrame = None) -> float:
         if df is None:
             df = self.df
 
@@ -118,17 +129,20 @@ class id3:
         attr_entropy = self.calc_attribute_entropy(attribute, df)
         gain = general - attr_entropy
 
-        self._registrar(f"  => Ganho de Informação de '{attribute}': {gain:.4f}\n")
+        split_info = self.calc_split_info(attribute, df)
+        gain_ratio = gain / split_info if split_info != 0 else 0
 
-        return gain
+        self._registrar(f"  => Ganho de '{attribute}': {gain:.4f}, Split Info: {split_info:.4f}, Ganho de Razão: {gain_ratio:.4f}\n")
+
+        return gain_ratio
 
     def best_attribute(self, attributes: list, df: pd.DataFrame = None) -> tuple:
         if df is None:
             df = self.df
 
-        gains = {attr: self.calc_entropy_gain(attr, df) for attr in attributes}
+        gains = {attr: self.calc_gain_ratio(attr, df) for attr in attributes}
 
-        self._registrar("Ganhos calculados:")
+        self._registrar("Ganhos de Razão calculados:")
         for attr, gain in gains.items():
             self._registrar(f"  {attr}: {gain:.4f}")
 
@@ -199,9 +213,9 @@ class id3:
             return
 
         conteudo = []
-        conteudo.append("===== LOG DE CONSTRUÇÃO (ID3) =====\n")
+        conteudo.append("===== LOG DE CONSTRUÇÃO (C4.5) =====\n")
         conteudo.extend(self.log)
-        conteudo.append("\n===== ÁRVORE FINAL (ID3) =====\n")
+        conteudo.append("\n===== ÁRVORE FINAL (C4.5) =====\n")
         conteudo.extend(self._arvore_texto())
 
         with open(filepath, "w", encoding="utf-8") as f:

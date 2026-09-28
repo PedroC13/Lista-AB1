@@ -1,15 +1,31 @@
-Exemplo,Historia de Credito,Divida,Garantia,Renda,Risco
-E1,Ruim,Alta,Nenhuma,$0 a $15k,Alto
-E2,Desconhecida,Alta,Nenhuma,$15 a $35k,Alto
-E3,Desconhecida,Baixa,Nenhuma,$15 a $35k,Moderado
-E4,Desconhecida,Baixa,Nenhuma,$0 a $15k,Alto
-E5,Desconhecida,Baixa,Nenhuma,Acima de $35k,Baixo
-E6,Desconhecida,Baixa,Adequada,Acima de $35k,Baixo
-E7,Ruim,Baixa,Nenhuma,$0 a $15k,Alto
-E8,Ruim,Baixa,Adequada,Acima de $35k,Moderado
-E9,Boa,Baixa,Nenhuma,Acima de $35k,Baixo
-E10,Boa,Alta,Adequada,Acima de $35k,Baixo
-E11,Boa,Alta,Nenhuma,$0 a $15k,Alto
-E12,Boa,Alta,Nenhuma,$15 a $35k,Moderado
-E13,Boa,Alta,Nenhuma,Acima de $35k,Baixo
-E14,Ruim,Alta,Nenhuma,$15 a $35k,Alto
+Exemplo,Historia de Credito,Divida,Garantia,Renda,Tempo de Emprego,Risco
+E1,Ruim,Alta,Nenhuma,$0 a $15k,Menos de 1 ano,Alto
+E2,Desconhecida,Alta,Nenhuma,$15 a $35k,Menos de 1 ano,Alto
+E3,Desconhecida,Baixa,Nenhuma,$15 a $35k,1 a 3 anos,Moderado
+E4,Desconhecida,Baixa,Nenhuma,$0 a $15k,Menos de 1 ano,Alto
+E5,Desconhecida,Baixa,Nenhuma,Acima de $35k,Acima de 3 anos,Baixo
+E6,Desconhecida,Baixa,Adequada,Acima de $35k,Acima de 3 anos,Baixo
+E7,Ruim,Baixa,Nenhuma,$0 a $15k,Menos de 1 ano,Alto
+E8,Ruim,Baixa,Adequada,Acima de $35k,Acima de 3 anos,Moderado
+E9,Boa,Baixa,Nenhuma,Acima de $35k,Acima de 3 anos,Baixo
+E10,Boa,Alta,Adequada,Acima de $35k,Acima de 3 anos,Baixo
+E11,Boa,Alta,Nenhuma,$0 a $15k,Menos de 1 ano,Alto
+E12,Boa,Alta,Nenhuma,$15 a $35k,1 a 3 anos,Moderado
+E13,Boa,Alta,Nenhuma,Acima de $35k,Acima de 3 anos,Baixo
+E14,Ruim,Alta,Nenhuma,$15 a $35k,Menos de 1 ano,Alto
+E15,Ruim,Alta,Adequada,$0 a $15k,Menos de 1 ano,Moderado
+E16,Boa,Baixa,Adequada,$15 a $35k,1 a 3 anos,Baixo
+E17,Desconhecida,Alta,Adequada,$15 a $35k,1 a 3 anos,Moderado
+E18,Ruim,Baixa,Nenhuma,$15 a $35k,1 a 3 anos,Alto
+E19,Boa,Baixa,Nenhuma,$0 a $15k,Menos de 1 ano,Moderado
+E20,Desconhecida,Alta,Nenhuma,$0 a $15k,Menos de 1 ano,Alto
+E21,Boa,Alta,Adequada,$15 a $35k,1 a 3 anos,Moderado
+E22,Ruim,Alta,Adequada,Acima de $35k,Acima de 3 anos,Moderado
+E23,Desconhecida,Baixa,Adequada,$0 a $15k,1 a 3 anos,Moderado
+E24,Boa,Baixa,Nenhuma,$15 a $35k,Acima de 3 anos,Baixo
+E25,Ruim,Baixa,Nenhuma,Acima de $35k,Menos de 1 ano,Moderado
+E26,Desconhecida,Alta,Nenhuma,Acima de $35k,1 a 3 anos,Moderado
+E27,Boa,Alta,Nenhuma,$0 a $15k,Acima de 3 anos,Moderado
+E28,Desconhecida,Baixa,Nenhuma,$15 a $35k,Acima de 3 anos,Baixo
+E29,Ruim,Alta,Nenhuma,$0 a $15k,1 a 3 anos,Alto
+E30,Boa,Baixa,Adequada,Acima de $35k,1 a 3 anos,Baixo

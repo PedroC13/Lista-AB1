@@ -1,0 +1,538 @@
+===== LOG DE CONSTRUÇÃO (C4.5) =====
+
+Entropia do conjunto atual (n=30): 1.5710
+--- 
+ Calculando entropia para o atributo: 'Historia de Credito' ---
+  Valor 'Boa': n=11, entropia=1.3222, peso=0.3667
+  Valor 'Desconhecida': n=10, entropia=1.5710, peso=0.3333
+  Valor 'Ruim': n=9, entropia=0.9911, peso=0.3000
+  => Entropia média ponderada de 'Historia de Credito': 1.3058
+  => Ganho de 'Historia de Credito': 0.2652, Split Info: 1.5801, Ganho de Razão: 0.1678
+
+Entropia do conjunto atual (n=30): 1.5710
+--- 
+ Calculando entropia para o atributo: 'Divida' ---
+  Valor 'Alta': n=15, entropia=1.4295, peso=0.5000
+  Valor 'Baixa': n=15, entropia=1.5058, peso=0.5000
+  => Entropia média ponderada de 'Divida': 1.4676
+  => Ganho de 'Divida': 0.1033, Split Info: 1.0000, Ganho de Razão: 0.1033
+
+Entropia do conjunto atual (n=30): 1.5710
+--- 
+ Calculando entropia para o atributo: 'Garantia' ---
+  Valor 'Adequada': n=10, entropia=0.9710, peso=0.3333
+  Valor 'Nenhuma': n=20, entropia=1.5395, peso=0.6667
+  => Entropia média ponderada de 'Garantia': 1.3500
+  => Ganho de 'Garantia': 0.2210, Split Info: 0.9183, Ganho de Razão: 0.2406
+
+Entropia do conjunto atual (n=30): 1.5710
+--- 
+ Calculando entropia para o atributo: 'Renda' ---
+  Valor '$0 a $15k': n=10, entropia=0.9710, peso=0.3333
+  Valor '$15 a $35k': n=10, entropia=1.5710, peso=0.3333
+  Valor 'Acima de $35k': n=10, entropia=0.9710, peso=0.3333
+  => Entropia média ponderada de 'Renda': 1.1710
+  => Ganho de 'Renda': 0.4000, Split Info: 1.5850, Ganho de Razão: 0.2524
+
+Entropia do conjunto atual (n=30): 1.5710
+--- 
+ Calculando entropia para o atributo: 'Tempo de Emprego' ---
+  Valor '1 a 3 anos': n=10, entropia=1.3710, peso=0.3333
+  Valor 'Acima de 3 anos': n=10, entropia=0.8813, peso=0.3333
+  Valor 'Menos de 1 ano': n=10, entropia=0.8813, peso=0.3333
+  => Entropia média ponderada de 'Tempo de Emprego': 1.0445
+  => Ganho de 'Tempo de Emprego': 0.5264, Split Info: 1.5850, Ganho de Razão: 0.3321
+
+Ganhos de Razão calculados:
+  Historia de Credito: 0.1678
+  Divida: 0.1033
+  Garantia: 0.2406
+  Renda: 0.2524
+  Tempo de Emprego: 0.3321
+=> Atributo escolhido: 'Tempo de Emprego'
+
+[Nó] Dividindo por: 'Tempo de Emprego'
+Entropia do conjunto atual (n=30): 1.5710
+┌────────────────────────────────────────────────────────────┐
+│ NÓ: Raiz
+│ Exemplos: n=30  [E1, E2, E3, E4, E5, E6, E7, E8, E9, E10, E11, E12, E13, E14, E15, E16, E17, E18, E19, E20, E21, E22, E23, E24, E25, E26, E27, E28, E29, E30]
+│ Classes: Moderado=12 | Alto=9 | Baixo=9
+│
+│ Entropia do conjunto: 1.5710
+│
+│ Ganho de Razão por atributo:
+│   Historia de Credito ........... 0.1678
+│   Divida ........................ 0.1033
+│   Garantia ...................... 0.2406
+│   Renda ......................... 0.2524
+│   Tempo de Emprego .............. 0.3321
+│
+│ ► Atributo escolhido: TEMPO DE EMPREGO (maior ganho)
+└────────────────────────────────────────────────────────────┘
+  -> Valor 'Menos de 1 ano' (n=10)
+Entropia do conjunto atual (n=10): 0.8813
+--- 
+ Calculando entropia para o atributo: 'Historia de Credito' ---
+  Valor 'Boa': n=2, entropia=1.0000, peso=0.2000
+  Valor 'Desconhecida': n=3, entropia=-0.0000, peso=0.3000
+  Valor 'Ruim': n=5, entropia=0.9710, peso=0.5000
+  => Entropia média ponderada de 'Historia de Credito': 0.6855
+  => Ganho de 'Historia de Credito': 0.1958, Split Info: 1.4855, Ganho de Razão: 0.1318
+
+Entropia do conjunto atual (n=10): 0.8813
+--- 
+ Calculando entropia para o atributo: 'Divida' ---
+  Valor 'Alta': n=6, entropia=0.6500, peso=0.6000
+  Valor 'Baixa': n=4, entropia=1.0000, peso=0.4000
+  => Entropia média ponderada de 'Divida': 0.7900
+  => Ganho de 'Divida': 0.0913, Split Info: 0.9710, Ganho de Razão: 0.0940
+
+Entropia do conjunto atual (n=10): 0.8813
+--- 
+ Calculando entropia para o atributo: 'Garantia' ---
+  Valor 'Adequada': n=1, entropia=-0.0000, peso=0.1000
+  Valor 'Nenhuma': n=9, entropia=0.7642, peso=0.9000
+  => Entropia média ponderada de 'Garantia': 0.6878
+  => Ganho de 'Garantia': 0.1935, Split Info: 0.4690, Ganho de Razão: 0.4126
+
+Entropia do conjunto atual (n=10): 0.8813
+--- 
+ Calculando entropia para o atributo: 'Renda' ---
+  Valor '$0 a $15k': n=7, entropia=0.8631, peso=0.7000
+  Valor '$15 a $35k': n=2, entropia=-0.0000, peso=0.2000
+  Valor 'Acima de $35k': n=1, entropia=-0.0000, peso=0.1000
+  => Entropia média ponderada de 'Renda': 0.6042
+  => Ganho de 'Renda': 0.2771, Split Info: 1.1568, Ganho de Razão: 0.2395
+
+Ganhos de Razão calculados:
+  Historia de Credito: 0.1318
+  Divida: 0.0940
+  Garantia: 0.4126
+  Renda: 0.2395
+=> Atributo escolhido: 'Garantia'
+
+  [Nó] Dividindo por: 'Garantia'
+Entropia do conjunto atual (n=10): 0.8813
+┌────────────────────────────────────────────────────────────┐
+│ NÓ: Ramo "Menos de 1 ano" → nível 1
+│ Exemplos: n=10  [E1, E2, E4, E7, E11, E14, E15, E19, E20, E25]
+│ Classes: Alto=7 | Moderado=3
+│
+│ Entropia do conjunto: 0.8813
+│
+│ Ganho de Razão por atributo:
+│   Historia de Credito ........... 0.1318
+│   Divida ........................ 0.0940
+│   Garantia ...................... 0.4126
+│   Renda ......................... 0.2395
+│
+│ ► Atributo escolhido: GARANTIA (maior ganho)
+└────────────────────────────────────────────────────────────┘
+    -> Valor 'Nenhuma' (n=9)
+Entropia do conjunto atual (n=9): 0.7642
+--- 
+ Calculando entropia para o atributo: 'Historia de Credito' ---
+  Valor 'Boa': n=2, entropia=1.0000, peso=0.2222
+  Valor 'Desconhecida': n=3, entropia=-0.0000, peso=0.3333
+  Valor 'Ruim': n=4, entropia=0.8113, peso=0.4444
+  => Entropia média ponderada de 'Historia de Credito': 0.5828
+  => Ganho de 'Historia de Credito': 0.1814, Split Info: 1.5305, Ganho de Razão: 0.1185
+
+Entropia do conjunto atual (n=9): 0.7642
+--- 
+ Calculando entropia para o atributo: 'Divida' ---
+  Valor 'Alta': n=5, entropia=-0.0000, peso=0.5556
+  Valor 'Baixa': n=4, entropia=1.0000, peso=0.4444
+  => Entropia média ponderada de 'Divida': 0.4444
+  => Ganho de 'Divida': 0.3198, Split Info: 0.9911, Ganho de Razão: 0.3226
+
+Entropia do conjunto atual (n=9): 0.7642
+--- 
+ Calculando entropia para o atributo: 'Renda' ---
+  Valor '$0 a $15k': n=6, entropia=0.6500, peso=0.6667
+  Valor '$15 a $35k': n=2, entropia=-0.0000, peso=0.2222
+  Valor 'Acima de $35k': n=1, entropia=-0.0000, peso=0.1111
+  => Entropia média ponderada de 'Renda': 0.4333
+  => Ganho de 'Renda': 0.3309, Split Info: 1.2244, Ganho de Razão: 0.2702
+
+Ganhos de Razão calculados:
+  Historia de Credito: 0.1185
+  Divida: 0.3226
+  Renda: 0.2702
+=> Atributo escolhido: 'Divida'
+
+    [Nó] Dividindo por: 'Divida'
+Entropia do conjunto atual (n=9): 0.7642
+┌────────────────────────────────────────────────────────────┐
+│ NÓ: Ramo "Nenhuma" → nível 2
+│ Exemplos: n=9  [E1, E2, E4, E7, E11, E14, E19, E20, E25]
+│ Classes: Alto=7 | Moderado=2
+│
+│ Entropia do conjunto: 0.7642
+│
+│ Ganho de Razão por atributo:
+│   Historia de Credito ........... 0.1185
+│   Divida ........................ 0.3226
+│   Renda ......................... 0.2702
+│
+│ ► Atributo escolhido: DIVIDA (maior ganho)
+└────────────────────────────────────────────────────────────┘
+      -> Valor 'Alta' (n=5)
+      [Folha] Classe única: Alto
+      -> Valor 'Baixa' (n=4)
+Entropia do conjunto atual (n=4): 1.0000
+--- 
+ Calculando entropia para o atributo: 'Historia de Credito' ---
+  Valor 'Boa': n=1, entropia=-0.0000, peso=0.2500
+  Valor 'Desconhecida': n=1, entropia=-0.0000, peso=0.2500
+  Valor 'Ruim': n=2, entropia=1.0000, peso=0.5000
+  => Entropia média ponderada de 'Historia de Credito': 0.5000
+  => Ganho de 'Historia de Credito': 0.5000, Split Info: 1.5000, Ganho de Razão: 0.3333
+
+Entropia do conjunto atual (n=4): 1.0000
+--- 
+ Calculando entropia para o atributo: 'Renda' ---
+  Valor '$0 a $15k': n=3, entropia=0.9183, peso=0.7500
+  Valor 'Acima de $35k': n=1, entropia=-0.0000, peso=0.2500
+  => Entropia média ponderada de 'Renda': 0.6887
+  => Ganho de 'Renda': 0.3113, Split Info: 0.8113, Ganho de Razão: 0.3837
+
+Ganhos de Razão calculados:
+  Historia de Credito: 0.3333
+  Renda: 0.3837
+=> Atributo escolhido: 'Renda'
+
+      [Nó] Dividindo por: 'Renda'
+Entropia do conjunto atual (n=4): 1.0000
+┌────────────────────────────────────────────────────────────┐
+│ NÓ: Ramo "Baixa" → nível 3
+│ Exemplos: n=4  [E4, E7, E19, E25]
+│ Classes: Alto=2 | Moderado=2
+│
+│ Entropia do conjunto: 1.0000
+│
+│ Ganho de Razão por atributo:
+│   Historia de Credito ........... 0.3333
+│   Renda ......................... 0.3837
+│
+│ ► Atributo escolhido: RENDA (maior ganho)
+└────────────────────────────────────────────────────────────┘
+        -> Valor '$0 a $15k' (n=3)
+Entropia do conjunto atual (n=3): 0.9183
+--- 
+ Calculando entropia para o atributo: 'Historia de Credito' ---
+  Valor 'Boa': n=1, entropia=-0.0000, peso=0.3333
+  Valor 'Desconhecida': n=1, entropia=-0.0000, peso=0.3333
+  Valor 'Ruim': n=1, entropia=-0.0000, peso=0.3333
+  => Entropia média ponderada de 'Historia de Credito': 0.0000
+  => Ganho de 'Historia de Credito': 0.9183, Split Info: 1.5850, Ganho de Razão: 0.5794
+
+Ganhos de Razão calculados:
+  Historia de Credito: 0.5794
+=> Atributo escolhido: 'Historia de Credito'
+
+        [Nó] Dividindo por: 'Historia de Credito'
+Entropia do conjunto atual (n=3): 0.9183
+┌────────────────────────────────────────────────────────────┐
+│ NÓ: Ramo "$0 a $15k" → nível 4
+│ Exemplos: n=3  [E4, E7, E19]
+│ Classes: Alto=2 | Moderado=1
+│
+│ Entropia do conjunto: 0.9183
+│
+│ Ganho de Razão por atributo:
+│   Historia de Credito ........... 0.5794
+│
+│ ► Atributo escolhido: HISTORIA DE CREDITO (maior ganho)
+└────────────────────────────────────────────────────────────┘
+          -> Valor 'Desconhecida' (n=1)
+          [Folha] Classe única: Alto
+          -> Valor 'Ruim' (n=1)
+          [Folha] Classe única: Alto
+          -> Valor 'Boa' (n=1)
+          [Folha] Classe única: Moderado
+        -> Valor 'Acima de $35k' (n=1)
+        [Folha] Classe única: Moderado
+    -> Valor 'Adequada' (n=1)
+    [Folha] Classe única: Moderado
+  -> Valor '1 a 3 anos' (n=10)
+Entropia do conjunto atual (n=10): 1.3710
+--- 
+ Calculando entropia para o atributo: 'Historia de Credito' ---
+  Valor 'Boa': n=4, entropia=1.0000, peso=0.4000
+  Valor 'Desconhecida': n=4, entropia=-0.0000, peso=0.4000
+  Valor 'Ruim': n=2, entropia=-0.0000, peso=0.2000
+  => Entropia média ponderada de 'Historia de Credito': 0.4000
+  => Ganho de 'Historia de Credito': 0.9710, Split Info: 1.5219, Ganho de Razão: 0.6380
+
+Entropia do conjunto atual (n=10): 1.3710
+--- 
+ Calculando entropia para o atributo: 'Divida' ---
+  Valor 'Alta': n=5, entropia=0.7219, peso=0.5000
+  Valor 'Baixa': n=5, entropia=1.5219, peso=0.5000
+  => Entropia média ponderada de 'Divida': 1.1219
+  => Ganho de 'Divida': 0.2490, Split Info: 1.0000, Ganho de Razão: 0.2490
+
+Entropia do conjunto atual (n=10): 1.3710
+--- 
+ Calculando entropia para o atributo: 'Garantia' ---
+  Valor 'Adequada': n=5, entropia=0.9710, peso=0.5000
+  Valor 'Nenhuma': n=5, entropia=0.9710, peso=0.5000
+  => Entropia média ponderada de 'Garantia': 0.9710
+  => Ganho de 'Garantia': 0.4000, Split Info: 1.0000, Ganho de Razão: 0.4000
+
+Entropia do conjunto atual (n=10): 1.3710
+--- 
+ Calculando entropia para o atributo: 'Renda' ---
+  Valor '$0 a $15k': n=2, entropia=1.0000, peso=0.2000
+  Valor '$15 a $35k': n=6, entropia=1.2516, peso=0.6000
+  Valor 'Acima de $35k': n=2, entropia=1.0000, peso=0.2000
+  => Entropia média ponderada de 'Renda': 1.1510
+  => Ganho de 'Renda': 0.2200, Split Info: 1.3710, Ganho de Razão: 0.1605
+
+Ganhos de Razão calculados:
+  Historia de Credito: 0.6380
+  Divida: 0.2490
+  Garantia: 0.4000
+  Renda: 0.1605
+=> Atributo escolhido: 'Historia de Credito'
+
+  [Nó] Dividindo por: 'Historia de Credito'
+Entropia do conjunto atual (n=10): 1.3710
+┌────────────────────────────────────────────────────────────┐
+│ NÓ: Ramo "1 a 3 anos" → nível 1
+│ Exemplos: n=10  [E3, E12, E16, E17, E18, E21, E23, E26, E29, E30]
+│ Classes: Moderado=6 | Baixo=2 | Alto=2
+│
+│ Entropia do conjunto: 1.3710
+│
+│ Ganho de Razão por atributo:
+│   Historia de Credito ........... 0.6380
+│   Divida ........................ 0.2490
+│   Garantia ...................... 0.4000
+│   Renda ......................... 0.1605
+│
+│ ► Atributo escolhido: HISTORIA DE CREDITO (maior ganho)
+└────────────────────────────────────────────────────────────┘
+    -> Valor 'Desconhecida' (n=4)
+    [Folha] Classe única: Moderado
+    -> Valor 'Boa' (n=4)
+Entropia do conjunto atual (n=4): 1.0000
+--- 
+ Calculando entropia para o atributo: 'Divida' ---
+  Valor 'Alta': n=2, entropia=-0.0000, peso=0.5000
+  Valor 'Baixa': n=2, entropia=-0.0000, peso=0.5000
+  => Entropia média ponderada de 'Divida': 0.0000
+  => Ganho de 'Divida': 1.0000, Split Info: 1.0000, Ganho de Razão: 1.0000
+
+Entropia do conjunto atual (n=4): 1.0000
+--- 
+ Calculando entropia para o atributo: 'Garantia' ---
+  Valor 'Adequada': n=3, entropia=0.9183, peso=0.7500
+  Valor 'Nenhuma': n=1, entropia=-0.0000, peso=0.2500
+  => Entropia média ponderada de 'Garantia': 0.6887
+  => Ganho de 'Garantia': 0.3113, Split Info: 0.8113, Ganho de Razão: 0.3837
+
+Entropia do conjunto atual (n=4): 1.0000
+--- 
+ Calculando entropia para o atributo: 'Renda' ---
+  Valor '$15 a $35k': n=3, entropia=0.9183, peso=0.7500
+  Valor 'Acima de $35k': n=1, entropia=-0.0000, peso=0.2500
+  => Entropia média ponderada de 'Renda': 0.6887
+  => Ganho de 'Renda': 0.3113, Split Info: 0.8113, Ganho de Razão: 0.3837
+
+Ganhos de Razão calculados:
+  Divida: 1.0000
+  Garantia: 0.3837
+  Renda: 0.3837
+=> Atributo escolhido: 'Divida'
+
+    [Nó] Dividindo por: 'Divida'
+Entropia do conjunto atual (n=4): 1.0000
+┌────────────────────────────────────────────────────────────┐
+│ NÓ: Ramo "Boa" → nível 2
+│ Exemplos: n=4  [E12, E16, E21, E30]
+│ Classes: Moderado=2 | Baixo=2
+│
+│ Entropia do conjunto: 1.0000
+│
+│ Ganho de Razão por atributo:
+│   Divida ........................ 1.0000
+│   Garantia ...................... 0.3837
+│   Renda ......................... 0.3837
+│
+│ ► Atributo escolhido: DIVIDA (maior ganho)
+└────────────────────────────────────────────────────────────┘
+      -> Valor 'Alta' (n=2)
+      [Folha] Classe única: Moderado
+      -> Valor 'Baixa' (n=2)
+      [Folha] Classe única: Baixo
+    -> Valor 'Ruim' (n=2)
+    [Folha] Classe única: Alto
+  -> Valor 'Acima de 3 anos' (n=10)
+Entropia do conjunto atual (n=10): 0.8813
+--- 
+ Calculando entropia para o atributo: 'Historia de Credito' ---
+  Valor 'Boa': n=5, entropia=0.7219, peso=0.5000
+  Valor 'Desconhecida': n=3, entropia=-0.0000, peso=0.3000
+  Valor 'Ruim': n=2, entropia=-0.0000, peso=0.2000
+  => Entropia média ponderada de 'Historia de Credito': 0.3610
+  => Ganho de 'Historia de Credito': 0.5203, Split Info: 1.4855, Ganho de Razão: 0.3503
+
+Entropia do conjunto atual (n=10): 0.8813
+--- 
+ Calculando entropia para o atributo: 'Divida' ---
+  Valor 'Alta': n=4, entropia=1.0000, peso=0.4000
+  Valor 'Baixa': n=6, entropia=0.6500, peso=0.6000
+  => Entropia média ponderada de 'Divida': 0.7900
+  => Ganho de 'Divida': 0.0913, Split Info: 0.9710, Ganho de Razão: 0.0940
+
+Entropia do conjunto atual (n=10): 0.8813
+--- 
+ Calculando entropia para o atributo: 'Garantia' ---
+  Valor 'Adequada': n=4, entropia=1.0000, peso=0.4000
+  Valor 'Nenhuma': n=6, entropia=0.6500, peso=0.6000
+  => Entropia média ponderada de 'Garantia': 0.7900
+  => Ganho de 'Garantia': 0.0913, Split Info: 0.9710, Ganho de Razão: 0.0940
+
+Entropia do conjunto atual (n=10): 0.8813
+--- 
+ Calculando entropia para o atributo: 'Renda' ---
+  Valor '$0 a $15k': n=1, entropia=-0.0000, peso=0.1000
+  Valor '$15 a $35k': n=2, entropia=-0.0000, peso=0.2000
+  Valor 'Acima de $35k': n=7, entropia=0.8631, peso=0.7000
+  => Entropia média ponderada de 'Renda': 0.6042
+  => Ganho de 'Renda': 0.2771, Split Info: 1.1568, Ganho de Razão: 0.2395
+
+Ganhos de Razão calculados:
+  Historia de Credito: 0.3503
+  Divida: 0.0940
+  Garantia: 0.0940
+  Renda: 0.2395
+=> Atributo escolhido: 'Historia de Credito'
+
+  [Nó] Dividindo por: 'Historia de Credito'
+Entropia do conjunto atual (n=10): 0.8813
+┌────────────────────────────────────────────────────────────┐
+│ NÓ: Ramo "Acima de 3 anos" → nível 1
+│ Exemplos: n=10  [E5, E6, E8, E9, E10, E13, E22, E24, E27, E28]
+│ Classes: Baixo=7 | Moderado=3
+│
+│ Entropia do conjunto: 0.8813
+│
+│ Ganho de Razão por atributo:
+│   Historia de Credito ........... 0.3503
+│   Divida ........................ 0.0940
+│   Garantia ...................... 0.0940
+│   Renda ......................... 0.2395
+│
+│ ► Atributo escolhido: HISTORIA DE CREDITO (maior ganho)
+└────────────────────────────────────────────────────────────┘
+    -> Valor 'Desconhecida' (n=3)
+    [Folha] Classe única: Baixo
+    -> Valor 'Ruim' (n=2)
+    [Folha] Classe única: Moderado
+    -> Valor 'Boa' (n=5)
+Entropia do conjunto atual (n=5): 0.7219
+--- 
+ Calculando entropia para o atributo: 'Divida' ---
+  Valor 'Alta': n=3, entropia=0.9183, peso=0.6000
+  Valor 'Baixa': n=2, entropia=-0.0000, peso=0.4000
+  => Entropia média ponderada de 'Divida': 0.5510
+  => Ganho de 'Divida': 0.1710, Split Info: 0.9710, Ganho de Razão: 0.1761
+
+Entropia do conjunto atual (n=5): 0.7219
+--- 
+ Calculando entropia para o atributo: 'Garantia' ---
+  Valor 'Adequada': n=1, entropia=-0.0000, peso=0.2000
+  Valor 'Nenhuma': n=4, entropia=0.8113, peso=0.8000
+  => Entropia média ponderada de 'Garantia': 0.6490
+  => Ganho de 'Garantia': 0.0729, Split Info: 0.7219, Ganho de Razão: 0.1010
+
+Entropia do conjunto atual (n=5): 0.7219
+--- 
+ Calculando entropia para o atributo: 'Renda' ---
+  Valor '$0 a $15k': n=1, entropia=-0.0000, peso=0.2000
+  Valor '$15 a $35k': n=1, entropia=-0.0000, peso=0.2000
+  Valor 'Acima de $35k': n=3, entropia=-0.0000, peso=0.6000
+  => Entropia média ponderada de 'Renda': 0.0000
+  => Ganho de 'Renda': 0.7219, Split Info: 1.3710, Ganho de Razão: 0.5266
+
+Ganhos de Razão calculados:
+  Divida: 0.1761
+  Garantia: 0.1010
+  Renda: 0.5266
+=> Atributo escolhido: 'Renda'
+
+    [Nó] Dividindo por: 'Renda'
+Entropia do conjunto atual (n=5): 0.7219
+┌────────────────────────────────────────────────────────────┐
+│ NÓ: Ramo "Boa" → nível 2
+│ Exemplos: n=5  [E9, E10, E13, E24, E27]
+│ Classes: Baixo=4 | Moderado=1
+│
+│ Entropia do conjunto: 0.7219
+│
+│ Ganho de Razão por atributo:
+│   Divida ........................ 0.1761
+│   Garantia ...................... 0.1010
+│   Renda ......................... 0.5266
+│
+│ ► Atributo escolhido: RENDA (maior ganho)
+└────────────────────────────────────────────────────────────┘
+      -> Valor 'Acima de $35k' (n=3)
+      [Folha] Classe única: Baixo
+      -> Valor '$15 a $35k' (n=1)
+      [Folha] Classe única: Baixo
+      -> Valor '$0 a $15k' (n=1)
+      [Folha] Classe única: Moderado
+
+===== ÁRVORE FINAL (C4.5) =====
+
+[Nó] Atributo: Tempo de Emprego
+  -> Valor 'Menos de 1 ano':
+    [Nó] Atributo: Garantia
+      -> Valor 'Nenhuma':
+        [Nó] Atributo: Divida
+          -> Valor 'Alta':
+            [Folha] Classe: Alto
+          -> Valor 'Baixa':
+            [Nó] Atributo: Renda
+              -> Valor '$0 a $15k':
+                [Nó] Atributo: Historia de Credito
+                  -> Valor 'Desconhecida':
+                    [Folha] Classe: Alto
+                  -> Valor 'Ruim':
+                    [Folha] Classe: Alto
+                  -> Valor 'Boa':
+                    [Folha] Classe: Moderado
+              -> Valor 'Acima de $35k':
+                [Folha] Classe: Moderado
+      -> Valor 'Adequada':
+        [Folha] Classe: Moderado
+  -> Valor '1 a 3 anos':
+    [Nó] Atributo: Historia de Credito
+      -> Valor 'Desconhecida':
+        [Folha] Classe: Moderado
+      -> Valor 'Boa':
+        [Nó] Atributo: Divida
+          -> Valor 'Alta':
+            [Folha] Classe: Moderado
+          -> Valor 'Baixa':
+            [Folha] Classe: Baixo
+      -> Valor 'Ruim':
+        [Folha] Classe: Alto
+  -> Valor 'Acima de 3 anos':
+    [Nó] Atributo: Historia de Credito
+      -> Valor 'Desconhecida':
+        [Folha] Classe: Baixo
+      -> Valor 'Ruim':
+        [Folha] Classe: Moderado
+      -> Valor 'Boa':
+        [Nó] Atributo: Renda
+          -> Valor 'Acima de $35k':
+            [Folha] Classe: Baixo
+          -> Valor '$15 a $35k':
+            [Folha] Classe: Baixo
+          -> Valor '$0 a $15k':
+            [Folha] Classe: Moderado

@@ -1,8 +1,7 @@
 import pandas as pd
-import numpy as np
 from node import Node
 
-class id3:
+class cart:
     def __init__(self, df: pd.DataFrame, verbose: bool = False) -> None:
         self.df = df
         self.verbose = verbose
@@ -31,9 +30,9 @@ class id3:
         linhas.append(f"│ Exemplos: n={len(df)}  [{', '.join(exemplos)}]")
         linhas.append(f"│ Classes: " + " | ".join(f"{c}={n}" for c, n in contagem.items()))
         linhas.append("│")
-        linhas.append(f"│ Entropia do conjunto: {impureza:.4f}")
+        linhas.append(f"│ Gini do conjunto: {impureza:.4f}")
         linhas.append("│")
-        linhas.append("│ Ganho de Informação por atributo:")
+        linhas.append("│ Ganho de Gini por atributo:")
         for attr, gain in gains.items():
             pontos = "." * max(1, 30 - len(attr))
             linhas.append(f"│   {attr} {pontos} {gain:.4f}")
@@ -71,29 +70,29 @@ class id3:
 
         return resultado
 
-    def calc_general_entropy(self, df: pd.DataFrame = None) -> float:
+    def calc_gini(self, df: pd.DataFrame = None) -> float:
         if df is None:
             df = self.df
 
         values = df[self.target].value_counts()
         probability = values / values.sum()
-        entropy = -sum(probability * np.log2(probability))
+        gini = 1 - sum(probability ** 2)
 
-        self._registrar(f"Entropia do conjunto atual (n={len(df)}): {entropy:.4f}")
+        self._registrar(f"Gini do conjunto atual (n={len(df)}): {gini:.4f}")
 
-        return entropy
+        return gini
 
-    def calc_attribute_entropy(self, attribute: str, df: pd.DataFrame = None) -> float:
-        """Entropia média ponderada resultante de dividir o conjunto pelo atributo."""
+    def calc_attribute_gini(self, attribute: str, df: pd.DataFrame = None) -> float:
+        """Gini médio ponderado resultante de dividir o conjunto pelo atributo."""
         if df is None:
             df = self.df
 
         counting = df.groupby(attribute)[self.target].value_counts()
         total = len(df)
 
-        self._registrar(f"--- \n Calculando entropia para o atributo: '{attribute}' ---")
+        self._registrar(f"--- \n Calculando Gini para o atributo: '{attribute}' ---")
 
-        entropy_weighted_sum = 0
+        gini_weighted_sum = 0
 
         for group in counting.index.get_level_values(0).unique():
             values = counting[group]
@@ -101,24 +100,24 @@ class id3:
             probability = values / quantity
             weight = quantity / total
 
-            entropy = -sum(probability * np.log2(probability))
-            entropy_weighted_sum += entropy * weight
+            gini = 1 - sum(probability ** 2)
+            gini_weighted_sum += gini * weight
 
-            self._registrar(f"  Valor '{group}': n={quantity}, entropia={entropy:.4f}, peso={weight:.4f}")
+            self._registrar(f"  Valor '{group}': n={quantity}, gini={gini:.4f}, peso={weight:.4f}")
 
-        self._registrar(f"  => Entropia média ponderada de '{attribute}': {entropy_weighted_sum:.4f}")
+        self._registrar(f"  => Gini médio ponderado de '{attribute}': {gini_weighted_sum:.4f}")
 
-        return entropy_weighted_sum
+        return gini_weighted_sum
 
-    def calc_entropy_gain(self, attribute: str, df: pd.DataFrame = None) -> float:
+    def calc_gini_gain(self, attribute: str, df: pd.DataFrame = None) -> float:
         if df is None:
             df = self.df
 
-        general = self.calc_general_entropy(df)
-        attr_entropy = self.calc_attribute_entropy(attribute, df)
-        gain = general - attr_entropy
+        general = self.calc_gini(df)
+        attr_gini = self.calc_attribute_gini(attribute, df)
+        gain = general - attr_gini
 
-        self._registrar(f"  => Ganho de Informação de '{attribute}': {gain:.4f}\n")
+        self._registrar(f"  => Ganho de Gini de '{attribute}': {gain:.4f}\n")
 
         return gain
 
@@ -126,9 +125,9 @@ class id3:
         if df is None:
             df = self.df
 
-        gains = {attr: self.calc_entropy_gain(attr, df) for attr in attributes}
+        gains = {attr: self.calc_gini_gain(attr, df) for attr in attributes}
 
-        self._registrar("Ganhos calculados:")
+        self._registrar("Ganhos de Gini calculados:")
         for attr, gain in gains.items():
             self._registrar(f"  {attr}: {gain:.4f}")
 
@@ -156,7 +155,7 @@ class id3:
         no = Node(atributo=escolhido)
 
         self._registrar("  " * depth + f"[Nó] Dividindo por: '{escolhido}'")
-        self._montar_prova(origem, df, self.calc_general_entropy(df), gains, escolhido)
+        self._montar_prova(origem, df, self.calc_gini(df), gains, escolhido)
 
         atributos_restantes = [a for a in attributes if a != escolhido]
 
@@ -199,9 +198,9 @@ class id3:
             return
 
         conteudo = []
-        conteudo.append("===== LOG DE CONSTRUÇÃO (ID3) =====\n")
+        conteudo.append("===== LOG DE CONSTRUÇÃO (CART) =====\n")
         conteudo.extend(self.log)
-        conteudo.append("\n===== ÁRVORE FINAL (ID3) =====\n")
+        conteudo.append("\n===== ÁRVORE FINAL (CART) =====\n")
         conteudo.extend(self._arvore_texto())
 
         with open(filepath, "w", encoding="utf-8") as f:
