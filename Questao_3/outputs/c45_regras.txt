@@ -1,0 +1,246 @@
+SE safety = med E persons = 4 E buying = med E maint = med ENTAO class = acc
+SE safety = med E persons = 4 E buying = med E maint = low E lug_boot = med E doors = 5more ENTAO class = good
+SE safety = med E persons = 4 E buying = med E maint = low E lug_boot = med E doors = 2 ENTAO class = acc
+SE safety = med E persons = 4 E buying = med E maint = low E lug_boot = med E doors = 3 ENTAO class = acc
+SE safety = med E persons = 4 E buying = med E maint = low E lug_boot = med E doors = 4 ENTAO class = good
+SE safety = med E persons = 4 E buying = med E maint = low E lug_boot = big ENTAO class = good
+SE safety = med E persons = 4 E buying = med E maint = low E lug_boot = small ENTAO class = acc
+SE safety = med E persons = 4 E buying = med E maint = vhigh E lug_boot = small ENTAO class = unacc
+SE safety = med E persons = 4 E buying = med E maint = vhigh E lug_boot = big ENTAO class = acc
+SE safety = med E persons = 4 E buying = med E maint = vhigh E lug_boot = med E doors = 2 ENTAO class = unacc
+SE safety = med E persons = 4 E buying = med E maint = vhigh E lug_boot = med E doors = 5more ENTAO class = acc
+SE safety = med E persons = 4 E buying = med E maint = vhigh E lug_boot = med E doors = 4 ENTAO class = acc
+SE safety = med E persons = 4 E buying = med E maint = high E lug_boot = small ENTAO class = unacc
+SE safety = med E persons = 4 E buying = med E maint = high E lug_boot = med E doors = 4 ENTAO class = acc
+SE safety = med E persons = 4 E buying = med E maint = high E lug_boot = med E doors = 3 ENTAO class = unacc
+SE safety = med E persons = 4 E buying = med E maint = high E lug_boot = big ENTAO class = acc
+SE safety = med E persons = 4 E buying = high E lug_boot = small ENTAO class = unacc
+SE safety = med E persons = 4 E buying = high E lug_boot = med E doors = 2 ENTAO class = unacc
+SE safety = med E persons = 4 E buying = high E lug_boot = med E doors = 3 ENTAO class = unacc
+SE safety = med E persons = 4 E buying = high E lug_boot = med E doors = 4 E maint = med ENTAO class = acc
+SE safety = med E persons = 4 E buying = high E lug_boot = med E doors = 4 E maint = vhigh ENTAO class = unacc
+SE safety = med E persons = 4 E buying = high E lug_boot = med E doors = 4 E maint = high ENTAO class = acc
+SE safety = med E persons = 4 E buying = high E lug_boot = med E doors = 5more ENTAO class = acc
+SE safety = med E persons = 4 E buying = high E lug_boot = big E maint = med ENTAO class = acc
+SE safety = med E persons = 4 E buying = high E lug_boot = big E maint = vhigh ENTAO class = unacc
+SE safety = med E persons = 4 E buying = high E lug_boot = big E maint = low ENTAO class = acc
+SE safety = med E persons = 4 E buying = high E lug_boot = big E maint = high ENTAO class = acc
+SE safety = med E persons = 4 E buying = vhigh E maint = low E lug_boot = big ENTAO class = acc
+SE safety = med E persons = 4 E buying = vhigh E maint = low E lug_boot = small ENTAO class = unacc
+SE safety = med E persons = 4 E buying = vhigh E maint = low E lug_boot = med E doors = 3 ENTAO class = unacc
+SE safety = med E persons = 4 E buying = vhigh E maint = low E lug_boot = med E doors = 5more ENTAO class = acc
+SE safety = med E persons = 4 E buying = vhigh E maint = low E lug_boot = med E doors = 2 ENTAO class = unacc
+SE safety = med E persons = 4 E buying = vhigh E maint = med E lug_boot = big ENTAO class = acc
+SE safety = med E persons = 4 E buying = vhigh E maint = med E lug_boot = med E doors = 5more ENTAO class = acc
+SE safety = med E persons = 4 E buying = vhigh E maint = med E lug_boot = med E doors = 3 ENTAO class = unacc
+SE safety = med E persons = 4 E buying = vhigh E maint = med E lug_boot = med E doors = 4 ENTAO class = acc
+SE safety = med E persons = 4 E buying = vhigh E maint = med E lug_boot = med E doors = 2 ENTAO class = unacc
+SE safety = med E persons = 4 E buying = vhigh E maint = med E lug_boot = small ENTAO class = unacc
+SE safety = med E persons = 4 E buying = vhigh E maint = vhigh ENTAO class = unacc
+SE safety = med E persons = 4 E buying = vhigh E maint = high ENTAO class = unacc
+SE safety = med E persons = 4 E buying = low E maint = vhigh E lug_boot = big ENTAO class = acc
+SE safety = med E persons = 4 E buying = low E maint = vhigh E lug_boot = med E doors = 4 ENTAO class = acc
+SE safety = med E persons = 4 E buying = low E maint = vhigh E lug_boot = med E doors = 3 ENTAO class = unacc
+SE safety = med E persons = 4 E buying = low E maint = vhigh E lug_boot = med E doors = 2 ENTAO class = unacc
+SE safety = med E persons = 4 E buying = low E maint = vhigh E lug_boot = med E doors = 5more ENTAO class = acc
+SE safety = med E persons = 4 E buying = low E maint = vhigh E lug_boot = small ENTAO class = unacc
+SE safety = med E persons = 4 E buying = low E maint = med E lug_boot = small ENTAO class = acc
+SE safety = med E persons = 4 E buying = low E maint = med E lug_boot = big ENTAO class = good
+SE safety = med E persons = 4 E buying = low E maint = med E lug_boot = med E doors = 4 ENTAO class = good
+SE safety = med E persons = 4 E buying = low E maint = med E lug_boot = med E doors = 2 ENTAO class = acc
+SE safety = med E persons = 4 E buying = low E maint = low E lug_boot = med E doors = 5more ENTAO class = good
+SE safety = med E persons = 4 E buying = low E maint = low E lug_boot = med E doors = 4 ENTAO class = good
+SE safety = med E persons = 4 E buying = low E maint = low E lug_boot = med E doors = 3 ENTAO class = acc
+SE safety = med E persons = 4 E buying = low E maint = low E lug_boot = med E doors = 2 ENTAO class = acc
+SE safety = med E persons = 4 E buying = low E maint = low E lug_boot = small ENTAO class = acc
+SE safety = med E persons = 4 E buying = low E maint = low E lug_boot = big ENTAO class = good
+SE safety = med E persons = 4 E buying = low E maint = high ENTAO class = acc
+SE safety = med E persons = 2 ENTAO class = unacc
+SE safety = med E persons = more E lug_boot = small E buying = low E doors = 5more ENTAO class = acc
+SE safety = med E persons = more E lug_boot = small E buying = low E doors = 4 E maint = med ENTAO class = acc
+SE safety = med E persons = more E lug_boot = small E buying = low E doors = 4 E maint = high ENTAO class = acc
+SE safety = med E persons = more E lug_boot = small E buying = low E doors = 4 E maint = vhigh ENTAO class = unacc
+SE safety = med E persons = more E lug_boot = small E buying = low E doors = 3 E maint = low ENTAO class = acc
+SE safety = med E persons = more E lug_boot = small E buying = low E doors = 3 E maint = vhigh ENTAO class = unacc
+SE safety = med E persons = more E lug_boot = small E buying = low E doors = 3 E maint = med ENTAO class = acc
+SE safety = med E persons = more E lug_boot = small E buying = low E doors = 2 ENTAO class = unacc
+SE safety = med E persons = more E lug_boot = small E buying = vhigh ENTAO class = unacc
+SE safety = med E persons = more E lug_boot = small E buying = med E doors = 4 E maint = vhigh ENTAO class = unacc
+SE safety = med E persons = more E lug_boot = small E buying = med E doors = 4 E maint = high ENTAO class = unacc
+SE safety = med E persons = more E lug_boot = small E buying = med E doors = 4 E maint = low ENTAO class = acc
+SE safety = med E persons = more E lug_boot = small E buying = med E doors = 2 ENTAO class = unacc
+SE safety = med E persons = more E lug_boot = small E buying = med E doors = 3 E maint = med ENTAO class = acc
+SE safety = med E persons = more E lug_boot = small E buying = med E doors = 3 E maint = low ENTAO class = acc
+SE safety = med E persons = more E lug_boot = small E buying = med E doors = 3 E maint = vhigh ENTAO class = unacc
+SE safety = med E persons = more E lug_boot = small E buying = med E doors = 5more ENTAO class = acc
+SE safety = med E persons = more E lug_boot = small E buying = high ENTAO class = unacc
+SE safety = med E persons = more E lug_boot = med E buying = low E maint = low E doors = 2 ENTAO class = acc
+SE safety = med E persons = more E lug_boot = med E buying = low E maint = low E doors = 5more ENTAO class = good
+SE safety = med E persons = more E lug_boot = med E buying = low E maint = low E doors = 3 ENTAO class = good
+SE safety = med E persons = more E lug_boot = med E buying = low E maint = med E doors = 4 ENTAO class = good
+SE safety = med E persons = more E lug_boot = med E buying = low E maint = med E doors = 5more ENTAO class = good
+SE safety = med E persons = more E lug_boot = med E buying = low E maint = med E doors = 2 ENTAO class = acc
+SE safety = med E persons = more E lug_boot = med E buying = low E maint = high ENTAO class = acc
+SE safety = med E persons = more E lug_boot = med E buying = low E maint = vhigh ENTAO class = acc
+SE safety = med E persons = more E lug_boot = med E buying = med E maint = vhigh E doors = 4 ENTAO class = acc
+SE safety = med E persons = more E lug_boot = med E buying = med E maint = vhigh E doors = 3 ENTAO class = acc
+SE safety = med E persons = more E lug_boot = med E buying = med E maint = vhigh E doors = 2 ENTAO class = unacc
+SE safety = med E persons = more E lug_boot = med E buying = med E maint = med ENTAO class = acc
+SE safety = med E persons = more E lug_boot = med E buying = med E maint = high E doors = 3 ENTAO class = acc
+SE safety = med E persons = more E lug_boot = med E buying = med E maint = high E doors = 2 ENTAO class = unacc
+SE safety = med E persons = more E lug_boot = med E buying = med E maint = high E doors = 4 ENTAO class = acc
+SE safety = med E persons = more E lug_boot = med E buying = med E maint = high E doors = 5more ENTAO class = acc
+SE safety = med E persons = more E lug_boot = med E buying = med E maint = low E doors = 2 ENTAO class = acc
+SE safety = med E persons = more E lug_boot = med E buying = med E maint = low E doors = 4 ENTAO class = good
+SE safety = med E persons = more E lug_boot = med E buying = med E maint = low E doors = 3 ENTAO class = good
+SE safety = med E persons = more E lug_boot = med E buying = vhigh E maint = med ENTAO class = acc
+SE safety = med E persons = more E lug_boot = med E buying = vhigh E maint = low E doors = 5more ENTAO class = acc
+SE safety = med E persons = more E lug_boot = med E buying = vhigh E maint = low E doors = 2 ENTAO class = unacc
+SE safety = med E persons = more E lug_boot = med E buying = vhigh E maint = vhigh ENTAO class = unacc
+SE safety = med E persons = more E lug_boot = med E buying = vhigh E maint = high ENTAO class = unacc
+SE safety = med E persons = more E lug_boot = med E buying = high E doors = 2 ENTAO class = unacc
+SE safety = med E persons = more E lug_boot = med E buying = high E doors = 3 E maint = low ENTAO class = acc
+SE safety = med E persons = more E lug_boot = med E buying = high E doors = 3 E maint = med ENTAO class = acc
+SE safety = med E persons = more E lug_boot = med E buying = high E doors = 3 E maint = vhigh ENTAO class = unacc
+SE safety = med E persons = more E lug_boot = med E buying = high E doors = 3 E maint = high ENTAO class = acc
+SE safety = med E persons = more E lug_boot = med E buying = high E doors = 4 ENTAO class = acc
+SE safety = med E persons = more E lug_boot = med E buying = high E doors = 5more E maint = high ENTAO class = acc
+SE safety = med E persons = more E lug_boot = med E buying = high E doors = 5more E maint = vhigh ENTAO class = unacc
+SE safety = med E persons = more E lug_boot = med E buying = high E doors = 5more E maint = low ENTAO class = acc
+SE safety = med E persons = more E lug_boot = med E buying = high E doors = 5more E maint = med ENTAO class = acc
+SE safety = med E persons = more E lug_boot = big E maint = high E buying = med ENTAO class = acc
+SE safety = med E persons = more E lug_boot = big E maint = high E buying = vhigh ENTAO class = unacc
+SE safety = med E persons = more E lug_boot = big E maint = high E buying = high ENTAO class = acc
+SE safety = med E persons = more E lug_boot = big E maint = high E buying = low ENTAO class = acc
+SE safety = med E persons = more E lug_boot = big E maint = vhigh E buying = low ENTAO class = acc
+SE safety = med E persons = more E lug_boot = big E maint = vhigh E buying = med ENTAO class = acc
+SE safety = med E persons = more E lug_boot = big E maint = vhigh E buying = vhigh ENTAO class = unacc
+SE safety = med E persons = more E lug_boot = big E maint = vhigh E buying = high ENTAO class = unacc
+SE safety = med E persons = more E lug_boot = big E maint = low E buying = med ENTAO class = good
+SE safety = med E persons = more E lug_boot = big E maint = low E buying = high ENTAO class = acc
+SE safety = med E persons = more E lug_boot = big E maint = low E buying = low ENTAO class = good
+SE safety = med E persons = more E lug_boot = big E maint = low E buying = vhigh ENTAO class = acc
+SE safety = med E persons = more E lug_boot = big E maint = med E buying = med ENTAO class = acc
+SE safety = med E persons = more E lug_boot = big E maint = med E buying = high ENTAO class = acc
+SE safety = med E persons = more E lug_boot = big E maint = med E buying = low ENTAO class = good
+SE safety = med E persons = more E lug_boot = big E maint = med E buying = vhigh ENTAO class = acc
+SE safety = high E persons = 4 E buying = med E maint = low E lug_boot = med E doors = 2 ENTAO class = good
+SE safety = high E persons = 4 E buying = med E maint = low E lug_boot = med E doors = 3 ENTAO class = good
+SE safety = high E persons = 4 E buying = med E maint = low E lug_boot = med E doors = 4 ENTAO class = vgood
+SE safety = high E persons = 4 E buying = med E maint = low E lug_boot = big ENTAO class = vgood
+SE safety = high E persons = 4 E buying = med E maint = low E lug_boot = small ENTAO class = good
+SE safety = high E persons = 4 E buying = med E maint = vhigh ENTAO class = acc
+SE safety = high E persons = 4 E buying = med E maint = high ENTAO class = acc
+SE safety = high E persons = 4 E buying = med E maint = med E lug_boot = big ENTAO class = vgood
+SE safety = high E persons = 4 E buying = med E maint = med E lug_boot = med E doors = 2 ENTAO class = acc
+SE safety = high E persons = 4 E buying = med E maint = med E lug_boot = med E doors = 4 ENTAO class = vgood
+SE safety = high E persons = 4 E buying = med E maint = med E lug_boot = med E doors = 5more ENTAO class = vgood
+SE safety = high E persons = 4 E buying = med E maint = med E lug_boot = small ENTAO class = acc
+SE safety = high E persons = 4 E buying = high E maint = med ENTAO class = acc
+SE safety = high E persons = 4 E buying = high E maint = high ENTAO class = acc
+SE safety = high E persons = 4 E buying = high E maint = low ENTAO class = acc
+SE safety = high E persons = 4 E buying = high E maint = vhigh ENTAO class = unacc
+SE safety = high E persons = 4 E buying = vhigh E maint = high ENTAO class = unacc
+SE safety = high E persons = 4 E buying = vhigh E maint = low ENTAO class = acc
+SE safety = high E persons = 4 E buying = vhigh E maint = med ENTAO class = acc
+SE safety = high E persons = 4 E buying = vhigh E maint = vhigh ENTAO class = unacc
+SE safety = high E persons = 4 E buying = low E maint = med E lug_boot = med E doors = 5more ENTAO class = vgood
+SE safety = high E persons = 4 E buying = low E maint = med E lug_boot = med E doors = 4 ENTAO class = vgood
+SE safety = high E persons = 4 E buying = low E maint = med E lug_boot = med E doors = 2 ENTAO class = good
+SE safety = high E persons = 4 E buying = low E maint = med E lug_boot = med E doors = 3 ENTAO class = good
+SE safety = high E persons = 4 E buying = low E maint = med E lug_boot = big ENTAO class = vgood
+SE safety = high E persons = 4 E buying = low E maint = med E lug_boot = small ENTAO class = good
+SE safety = high E persons = 4 E buying = low E maint = vhigh ENTAO class = acc
+SE safety = high E persons = 4 E buying = low E maint = high E lug_boot = big ENTAO class = vgood
+SE safety = high E persons = 4 E buying = low E maint = high E lug_boot = small ENTAO class = acc
+SE safety = high E persons = 4 E buying = low E maint = high E lug_boot = med E doors = 2 ENTAO class = acc
+SE safety = high E persons = 4 E buying = low E maint = high E lug_boot = med E doors = 3 ENTAO class = acc
+SE safety = high E persons = 4 E buying = low E maint = high E lug_boot = med E doors = 5more ENTAO class = vgood
+SE safety = high E persons = 4 E buying = low E maint = low E lug_boot = big ENTAO class = vgood
+SE safety = high E persons = 4 E buying = low E maint = low E lug_boot = small ENTAO class = good
+SE safety = high E persons = 4 E buying = low E maint = low E lug_boot = med E doors = 3 ENTAO class = good
+SE safety = high E persons = 4 E buying = low E maint = low E lug_boot = med E doors = 5more ENTAO class = vgood
+SE safety = high E persons = 4 E buying = low E maint = low E lug_boot = med E doors = 2 ENTAO class = good
+SE safety = high E persons = 2 ENTAO class = unacc
+SE safety = high E persons = more E buying = high E maint = low E doors = 3 ENTAO class = acc
+SE safety = high E persons = more E buying = high E maint = low E doors = 5more ENTAO class = acc
+SE safety = high E persons = more E buying = high E maint = low E doors = 2 E lug_boot = big ENTAO class = acc
+SE safety = high E persons = more E buying = high E maint = low E doors = 2 E lug_boot = med ENTAO class = acc
+SE safety = high E persons = more E buying = high E maint = low E doors = 2 E lug_boot = small ENTAO class = unacc
+SE safety = high E persons = more E buying = high E maint = low E doors = 4 ENTAO class = acc
+SE safety = high E persons = more E buying = high E maint = med E doors = 5more ENTAO class = acc
+SE safety = high E persons = more E buying = high E maint = med E doors = 2 E lug_boot = small ENTAO class = unacc
+SE safety = high E persons = more E buying = high E maint = med E doors = 2 E lug_boot = big ENTAO class = acc
+SE safety = high E persons = more E buying = high E maint = med E doors = 2 E lug_boot = med ENTAO class = acc
+SE safety = high E persons = more E buying = high E maint = med E doors = 3 ENTAO class = acc
+SE safety = high E persons = more E buying = high E maint = med E doors = 4 ENTAO class = acc
+SE safety = high E persons = more E buying = high E maint = high E doors = 4 ENTAO class = acc
+SE safety = high E persons = more E buying = high E maint = high E doors = 2 E lug_boot = big ENTAO class = acc
+SE safety = high E persons = more E buying = high E maint = high E doors = 2 E lug_boot = med ENTAO class = acc
+SE safety = high E persons = more E buying = high E maint = high E doors = 2 E lug_boot = small ENTAO class = unacc
+SE safety = high E persons = more E buying = high E maint = high E doors = 3 ENTAO class = acc
+SE safety = high E persons = more E buying = high E maint = high E doors = 5more ENTAO class = acc
+SE safety = high E persons = more E buying = high E maint = vhigh ENTAO class = unacc
+SE safety = high E persons = more E buying = med E maint = vhigh E lug_boot = med ENTAO class = acc
+SE safety = high E persons = more E buying = med E maint = vhigh E lug_boot = big ENTAO class = acc
+SE safety = high E persons = more E buying = med E maint = vhigh E lug_boot = small E doors = 5more ENTAO class = acc
+SE safety = high E persons = more E buying = med E maint = vhigh E lug_boot = small E doors = 2 ENTAO class = unacc
+SE safety = high E persons = more E buying = med E maint = low E lug_boot = small E doors = 3 ENTAO class = good
+SE safety = high E persons = more E buying = med E maint = low E lug_boot = small E doors = 2 ENTAO class = unacc
+SE safety = high E persons = more E buying = med E maint = low E lug_boot = small E doors = 5more ENTAO class = good
+SE safety = high E persons = more E buying = med E maint = low E lug_boot = med E doors = 4 ENTAO class = vgood
+SE safety = high E persons = more E buying = med E maint = low E lug_boot = med E doors = 5more ENTAO class = vgood
+SE safety = high E persons = more E buying = med E maint = low E lug_boot = med E doors = 2 ENTAO class = good
+SE safety = high E persons = more E buying = med E maint = low E lug_boot = big ENTAO class = vgood
+SE safety = high E persons = more E buying = med E maint = high E doors = 2 E lug_boot = big ENTAO class = acc
+SE safety = high E persons = more E buying = med E maint = high E doors = 2 E lug_boot = med ENTAO class = acc
+SE safety = high E persons = more E buying = med E maint = high E doors = 2 E lug_boot = small ENTAO class = unacc
+SE safety = high E persons = more E buying = med E maint = high E doors = 5more ENTAO class = acc
+SE safety = high E persons = more E buying = med E maint = high E doors = 4 ENTAO class = acc
+SE safety = high E persons = more E buying = med E maint = high E doors = 3 ENTAO class = acc
+SE safety = high E persons = more E buying = med E maint = med E lug_boot = big ENTAO class = vgood
+SE safety = high E persons = more E buying = med E maint = med E lug_boot = small E doors = 5more ENTAO class = acc
+SE safety = high E persons = more E buying = med E maint = med E lug_boot = small E doors = 4 ENTAO class = acc
+SE safety = high E persons = more E buying = med E maint = med E lug_boot = small E doors = 2 ENTAO class = unacc
+SE safety = high E persons = more E buying = med E maint = med E lug_boot = small E doors = 3 ENTAO class = acc
+SE safety = high E persons = more E buying = med E maint = med E lug_boot = med E doors = 2 ENTAO class = acc
+SE safety = high E persons = more E buying = med E maint = med E lug_boot = med E doors = 5more ENTAO class = vgood
+SE safety = high E persons = more E buying = med E maint = med E lug_boot = med E doors = 4 ENTAO class = vgood
+SE safety = high E persons = more E buying = low E lug_boot = big E maint = high ENTAO class = vgood
+SE safety = high E persons = more E buying = low E lug_boot = big E maint = low ENTAO class = vgood
+SE safety = high E persons = more E buying = low E lug_boot = big E maint = vhigh ENTAO class = acc
+SE safety = high E persons = more E buying = low E lug_boot = big E maint = med ENTAO class = vgood
+SE safety = high E persons = more E buying = low E lug_boot = small E doors = 4 E maint = vhigh ENTAO class = acc
+SE safety = high E persons = more E buying = low E lug_boot = small E doors = 4 E maint = med ENTAO class = good
+SE safety = high E persons = more E buying = low E lug_boot = small E doors = 4 E maint = low ENTAO class = good
+SE safety = high E persons = more E buying = low E lug_boot = small E doors = 4 E maint = high ENTAO class = acc
+SE safety = high E persons = more E buying = low E lug_boot = small E doors = 2 ENTAO class = unacc
+SE safety = high E persons = more E buying = low E lug_boot = small E doors = 5more E maint = high ENTAO class = acc
+SE safety = high E persons = more E buying = low E lug_boot = small E doors = 5more E maint = vhigh ENTAO class = acc
+SE safety = high E persons = more E buying = low E lug_boot = small E doors = 5more E maint = med ENTAO class = good
+SE safety = high E persons = more E buying = low E lug_boot = small E doors = 3 E maint = med ENTAO class = good
+SE safety = high E persons = more E buying = low E lug_boot = small E doors = 3 E maint = low ENTAO class = good
+SE safety = high E persons = more E buying = low E lug_boot = small E doors = 3 E maint = high ENTAO class = acc
+SE safety = high E persons = more E buying = low E lug_boot = med E doors = 4 E maint = vhigh ENTAO class = acc
+SE safety = high E persons = more E buying = low E lug_boot = med E doors = 4 E maint = low ENTAO class = vgood
+SE safety = high E persons = more E buying = low E lug_boot = med E doors = 4 E maint = med ENTAO class = vgood
+SE safety = high E persons = more E buying = low E lug_boot = med E doors = 2 E maint = med ENTAO class = good
+SE safety = high E persons = more E buying = low E lug_boot = med E doors = 2 E maint = high ENTAO class = acc
+SE safety = high E persons = more E buying = low E lug_boot = med E doors = 2 E maint = vhigh ENTAO class = acc
+SE safety = high E persons = more E buying = low E lug_boot = med E doors = 2 E maint = low ENTAO class = good
+SE safety = high E persons = more E buying = low E lug_boot = med E doors = 5more ENTAO class = vgood
+SE safety = high E persons = more E buying = low E lug_boot = med E doors = 3 ENTAO class = vgood
+SE safety = high E persons = more E buying = vhigh E maint = low E doors = 4 ENTAO class = acc
+SE safety = high E persons = more E buying = vhigh E maint = low E doors = 2 E lug_boot = med ENTAO class = acc
+SE safety = high E persons = more E buying = vhigh E maint = low E doors = 2 E lug_boot = small ENTAO class = unacc
+SE safety = high E persons = more E buying = vhigh E maint = low E doors = 2 E lug_boot = big ENTAO class = acc
+SE safety = high E persons = more E buying = vhigh E maint = low E doors = 5more ENTAO class = acc
+SE safety = high E persons = more E buying = vhigh E maint = low E doors = 3 ENTAO class = acc
+SE safety = high E persons = more E buying = vhigh E maint = med E lug_boot = big ENTAO class = acc
+SE safety = high E persons = more E buying = vhigh E maint = med E lug_boot = med ENTAO class = acc
+SE safety = high E persons = more E buying = vhigh E maint = med E lug_boot = small E doors = 5more ENTAO class = acc
+SE safety = high E persons = more E buying = vhigh E maint = med E lug_boot = small E doors = 2 ENTAO class = unacc
+SE safety = high E persons = more E buying = vhigh E maint = med E lug_boot = small E doors = 3 ENTAO class = acc
+SE safety = high E persons = more E buying = vhigh E maint = vhigh ENTAO class = unacc
+SE safety = high E persons = more E buying = vhigh E maint = high ENTAO class = unacc
+SE safety = low ENTAO class = unacc
