@@ -1,0 +1,47 @@
+[Nó] Atributo: Tempo de Emprego
+  -> Valor 'Menos de 1 ano':
+    [Nó] Atributo: Garantia
+      -> Valor 'Nenhuma':
+        [Nó] Atributo: Divida
+          -> Valor 'Alta':
+            [Folha] Classe: Alto
+          -> Valor 'Baixa':
+            [Nó] Atributo: Renda
+              -> Valor '$0 a $15k':
+                [Nó] Atributo: Historia de Credito
+                  -> Valor 'Desconhecida':
+                    [Folha] Classe: Alto
+                  -> Valor 'Ruim':
+                    [Folha] Classe: Alto
+                  -> Valor 'Boa':
+                    [Folha] Classe: Moderado
+              -> Valor 'Acima de $35k':
+                [Folha] Classe: Moderado
+      -> Valor 'Adequada':
+        [Folha] Classe: Moderado
+  -> Valor '1 a 3 anos':
+    [Nó] Atributo: Historia de Credito
+      -> Valor 'Desconhecida':
+        [Folha] Classe: Moderado
+      -> Valor 'Boa':
+        [Nó] Atributo: Divida
+          -> Valor 'Alta':
+            [Folha] Classe: Moderado
+          -> Valor 'Baixa':
+            [Folha] Classe: Baixo
+      -> Valor 'Ruim':
+        [Folha] Classe: Alto
+  -> Valor 'Acima de 3 anos':
+    [Nó] Atributo: Historia de Credito
+      -> Valor 'Desconhecida':
+        [Folha] Classe: Baixo
+      -> Valor 'Ruim':
+        [Folha] Classe: Moderado
+      -> Valor 'Boa':
+        [Nó] Atributo: Renda
+          -> Valor 'Acima de $35k':
+            [Folha] Classe: Baixo
+          -> Valor '$15 a $35k':
+            [Folha] Classe: Baixo
+          -> Valor '$0 a $15k':
+            [Folha] Classe: Moderado

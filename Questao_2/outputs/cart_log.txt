@@ -1,0 +1,540 @@
+===== LOG DE CONSTRUÇÃO (CART) =====
+
+Gini do conjunto atual (n=30): 0.6600
+--- 
+ Calculando Gini para o atributo: 'Historia de Credito' ---
+  Valor 'Boa': n=11, gini=0.5620, peso=0.3667
+  Valor 'Desconhecida': n=10, gini=0.6600, peso=0.3333
+  Valor 'Ruim': n=9, gini=0.4938, peso=0.3000
+  => Gini médio ponderado de 'Historia de Credito': 0.5742
+  => Ganho de Gini de 'Historia de Credito': 0.0858
+
+Gini do conjunto atual (n=30): 0.6600
+--- 
+ Calculando Gini para o atributo: 'Divida' ---
+  Valor 'Alta': n=15, gini=0.6044, peso=0.5000
+  Valor 'Baixa': n=15, gini=0.6311, peso=0.5000
+  => Gini médio ponderado de 'Divida': 0.6178
+  => Ganho de Gini de 'Divida': 0.0422
+
+Gini do conjunto atual (n=30): 0.6600
+--- 
+ Calculando Gini para o atributo: 'Garantia' ---
+  Valor 'Adequada': n=10, gini=0.4800, peso=0.3333
+  Valor 'Nenhuma': n=20, gini=0.6450, peso=0.6667
+  => Gini médio ponderado de 'Garantia': 0.5900
+  => Ganho de Gini de 'Garantia': 0.0700
+
+Gini do conjunto atual (n=30): 0.6600
+--- 
+ Calculando Gini para o atributo: 'Renda' ---
+  Valor '$0 a $15k': n=10, gini=0.4800, peso=0.3333
+  Valor '$15 a $35k': n=10, gini=0.6600, peso=0.3333
+  Valor 'Acima de $35k': n=10, gini=0.4800, peso=0.3333
+  => Gini médio ponderado de 'Renda': 0.5400
+  => Ganho de Gini de 'Renda': 0.1200
+
+Gini do conjunto atual (n=30): 0.6600
+--- 
+ Calculando Gini para o atributo: 'Tempo de Emprego' ---
+  Valor '1 a 3 anos': n=10, gini=0.5600, peso=0.3333
+  Valor 'Acima de 3 anos': n=10, gini=0.4200, peso=0.3333
+  Valor 'Menos de 1 ano': n=10, gini=0.4200, peso=0.3333
+  => Gini médio ponderado de 'Tempo de Emprego': 0.4667
+  => Ganho de Gini de 'Tempo de Emprego': 0.1933
+
+Ganhos de Gini calculados:
+  Historia de Credito: 0.0858
+  Divida: 0.0422
+  Garantia: 0.0700
+  Renda: 0.1200
+  Tempo de Emprego: 0.1933
+=> Atributo escolhido: 'Tempo de Emprego'
+
+[Nó] Dividindo por: 'Tempo de Emprego'
+Gini do conjunto atual (n=30): 0.6600
+┌────────────────────────────────────────────────────────────┐
+│ NÓ: Raiz
+│ Exemplos: n=30  [E1, E2, E3, E4, E5, E6, E7, E8, E9, E10, E11, E12, E13, E14, E15, E16, E17, E18, E19, E20, E21, E22, E23, E24, E25, E26, E27, E28, E29, E30]
+│ Classes: Moderado=12 | Alto=9 | Baixo=9
+│
+│ Gini do conjunto: 0.6600
+│
+│ Ganho de Gini por atributo:
+│   Historia de Credito ........... 0.0858
+│   Divida ........................ 0.0422
+│   Garantia ...................... 0.0700
+│   Renda ......................... 0.1200
+│   Tempo de Emprego .............. 0.1933
+│
+│ ► Atributo escolhido: TEMPO DE EMPREGO (maior ganho)
+└────────────────────────────────────────────────────────────┘
+  -> Valor 'Menos de 1 ano' (n=10)
+Gini do conjunto atual (n=10): 0.4200
+--- 
+ Calculando Gini para o atributo: 'Historia de Credito' ---
+  Valor 'Boa': n=2, gini=0.5000, peso=0.2000
+  Valor 'Desconhecida': n=3, gini=0.0000, peso=0.3000
+  Valor 'Ruim': n=5, gini=0.4800, peso=0.5000
+  => Gini médio ponderado de 'Historia de Credito': 0.3400
+  => Ganho de Gini de 'Historia de Credito': 0.0800
+
+Gini do conjunto atual (n=10): 0.4200
+--- 
+ Calculando Gini para o atributo: 'Divida' ---
+  Valor 'Alta': n=6, gini=0.2778, peso=0.6000
+  Valor 'Baixa': n=4, gini=0.5000, peso=0.4000
+  => Gini médio ponderado de 'Divida': 0.3667
+  => Ganho de Gini de 'Divida': 0.0533
+
+Gini do conjunto atual (n=10): 0.4200
+--- 
+ Calculando Gini para o atributo: 'Garantia' ---
+  Valor 'Adequada': n=1, gini=0.0000, peso=0.1000
+  Valor 'Nenhuma': n=9, gini=0.3457, peso=0.9000
+  => Gini médio ponderado de 'Garantia': 0.3111
+  => Ganho de Gini de 'Garantia': 0.1089
+
+Gini do conjunto atual (n=10): 0.4200
+--- 
+ Calculando Gini para o atributo: 'Renda' ---
+  Valor '$0 a $15k': n=7, gini=0.4082, peso=0.7000
+  Valor '$15 a $35k': n=2, gini=0.0000, peso=0.2000
+  Valor 'Acima de $35k': n=1, gini=0.0000, peso=0.1000
+  => Gini médio ponderado de 'Renda': 0.2857
+  => Ganho de Gini de 'Renda': 0.1343
+
+Ganhos de Gini calculados:
+  Historia de Credito: 0.0800
+  Divida: 0.0533
+  Garantia: 0.1089
+  Renda: 0.1343
+=> Atributo escolhido: 'Renda'
+
+  [Nó] Dividindo por: 'Renda'
+Gini do conjunto atual (n=10): 0.4200
+┌────────────────────────────────────────────────────────────┐
+│ NÓ: Ramo "Menos de 1 ano" → nível 1
+│ Exemplos: n=10  [E1, E2, E4, E7, E11, E14, E15, E19, E20, E25]
+│ Classes: Alto=7 | Moderado=3
+│
+│ Gini do conjunto: 0.4200
+│
+│ Ganho de Gini por atributo:
+│   Historia de Credito ........... 0.0800
+│   Divida ........................ 0.0533
+│   Garantia ...................... 0.1089
+│   Renda ......................... 0.1343
+│
+│ ► Atributo escolhido: RENDA (maior ganho)
+└────────────────────────────────────────────────────────────┘
+    -> Valor '$0 a $15k' (n=7)
+Gini do conjunto atual (n=7): 0.4082
+--- 
+ Calculando Gini para o atributo: 'Historia de Credito' ---
+  Valor 'Boa': n=2, gini=0.5000, peso=0.2857
+  Valor 'Desconhecida': n=2, gini=0.0000, peso=0.2857
+  Valor 'Ruim': n=3, gini=0.4444, peso=0.4286
+  => Gini médio ponderado de 'Historia de Credito': 0.3333
+  => Ganho de Gini de 'Historia de Credito': 0.0748
+
+Gini do conjunto atual (n=7): 0.4082
+--- 
+ Calculando Gini para o atributo: 'Divida' ---
+  Valor 'Alta': n=4, gini=0.3750, peso=0.5714
+  Valor 'Baixa': n=3, gini=0.4444, peso=0.4286
+  => Gini médio ponderado de 'Divida': 0.4048
+  => Ganho de Gini de 'Divida': 0.0034
+
+Gini do conjunto atual (n=7): 0.4082
+--- 
+ Calculando Gini para o atributo: 'Garantia' ---
+  Valor 'Adequada': n=1, gini=0.0000, peso=0.1429
+  Valor 'Nenhuma': n=6, gini=0.2778, peso=0.8571
+  => Gini médio ponderado de 'Garantia': 0.2381
+  => Ganho de Gini de 'Garantia': 0.1701
+
+Ganhos de Gini calculados:
+  Historia de Credito: 0.0748
+  Divida: 0.0034
+  Garantia: 0.1701
+=> Atributo escolhido: 'Garantia'
+
+    [Nó] Dividindo por: 'Garantia'
+Gini do conjunto atual (n=7): 0.4082
+┌────────────────────────────────────────────────────────────┐
+│ NÓ: Ramo "$0 a $15k" → nível 2
+│ Exemplos: n=7  [E1, E4, E7, E11, E15, E19, E20]
+│ Classes: Alto=5 | Moderado=2
+│
+│ Gini do conjunto: 0.4082
+│
+│ Ganho de Gini por atributo:
+│   Historia de Credito ........... 0.0748
+│   Divida ........................ 0.0034
+│   Garantia ...................... 0.1701
+│
+│ ► Atributo escolhido: GARANTIA (maior ganho)
+└────────────────────────────────────────────────────────────┘
+      -> Valor 'Nenhuma' (n=6)
+Gini do conjunto atual (n=6): 0.2778
+--- 
+ Calculando Gini para o atributo: 'Historia de Credito' ---
+  Valor 'Boa': n=2, gini=0.5000, peso=0.3333
+  Valor 'Desconhecida': n=2, gini=0.0000, peso=0.3333
+  Valor 'Ruim': n=2, gini=0.0000, peso=0.3333
+  => Gini médio ponderado de 'Historia de Credito': 0.1667
+  => Ganho de Gini de 'Historia de Credito': 0.1111
+
+Gini do conjunto atual (n=6): 0.2778
+--- 
+ Calculando Gini para o atributo: 'Divida' ---
+  Valor 'Alta': n=3, gini=0.0000, peso=0.5000
+  Valor 'Baixa': n=3, gini=0.4444, peso=0.5000
+  => Gini médio ponderado de 'Divida': 0.2222
+  => Ganho de Gini de 'Divida': 0.0556
+
+Ganhos de Gini calculados:
+  Historia de Credito: 0.1111
+  Divida: 0.0556
+=> Atributo escolhido: 'Historia de Credito'
+
+      [Nó] Dividindo por: 'Historia de Credito'
+Gini do conjunto atual (n=6): 0.2778
+┌────────────────────────────────────────────────────────────┐
+│ NÓ: Ramo "Nenhuma" → nível 3
+│ Exemplos: n=6  [E1, E4, E7, E11, E19, E20]
+│ Classes: Alto=5 | Moderado=1
+│
+│ Gini do conjunto: 0.2778
+│
+│ Ganho de Gini por atributo:
+│   Historia de Credito ........... 0.1111
+│   Divida ........................ 0.0556
+│
+│ ► Atributo escolhido: HISTORIA DE CREDITO (maior ganho)
+└────────────────────────────────────────────────────────────┘
+        -> Valor 'Ruim' (n=2)
+        [Folha] Classe única: Alto
+        -> Valor 'Desconhecida' (n=2)
+        [Folha] Classe única: Alto
+        -> Valor 'Boa' (n=2)
+Gini do conjunto atual (n=2): 0.5000
+--- 
+ Calculando Gini para o atributo: 'Divida' ---
+  Valor 'Alta': n=1, gini=0.0000, peso=0.5000
+  Valor 'Baixa': n=1, gini=0.0000, peso=0.5000
+  => Gini médio ponderado de 'Divida': 0.0000
+  => Ganho de Gini de 'Divida': 0.5000
+
+Ganhos de Gini calculados:
+  Divida: 0.5000
+=> Atributo escolhido: 'Divida'
+
+        [Nó] Dividindo por: 'Divida'
+Gini do conjunto atual (n=2): 0.5000
+┌────────────────────────────────────────────────────────────┐
+│ NÓ: Ramo "Boa" → nível 4
+│ Exemplos: n=2  [E11, E19]
+│ Classes: Alto=1 | Moderado=1
+│
+│ Gini do conjunto: 0.5000
+│
+│ Ganho de Gini por atributo:
+│   Divida ........................ 0.5000
+│
+│ ► Atributo escolhido: DIVIDA (maior ganho)
+└────────────────────────────────────────────────────────────┘
+          -> Valor 'Alta' (n=1)
+          [Folha] Classe única: Alto
+          -> Valor 'Baixa' (n=1)
+          [Folha] Classe única: Moderado
+      -> Valor 'Adequada' (n=1)
+      [Folha] Classe única: Moderado
+    -> Valor '$15 a $35k' (n=2)
+    [Folha] Classe única: Alto
+    -> Valor 'Acima de $35k' (n=1)
+    [Folha] Classe única: Moderado
+  -> Valor '1 a 3 anos' (n=10)
+Gini do conjunto atual (n=10): 0.5600
+--- 
+ Calculando Gini para o atributo: 'Historia de Credito' ---
+  Valor 'Boa': n=4, gini=0.5000, peso=0.4000
+  Valor 'Desconhecida': n=4, gini=0.0000, peso=0.4000
+  Valor 'Ruim': n=2, gini=0.0000, peso=0.2000
+  => Gini médio ponderado de 'Historia de Credito': 0.2000
+  => Ganho de Gini de 'Historia de Credito': 0.3600
+
+Gini do conjunto atual (n=10): 0.5600
+--- 
+ Calculando Gini para o atributo: 'Divida' ---
+  Valor 'Alta': n=5, gini=0.3200, peso=0.5000
+  Valor 'Baixa': n=5, gini=0.6400, peso=0.5000
+  => Gini médio ponderado de 'Divida': 0.4800
+  => Ganho de Gini de 'Divida': 0.0800
+
+Gini do conjunto atual (n=10): 0.5600
+--- 
+ Calculando Gini para o atributo: 'Garantia' ---
+  Valor 'Adequada': n=5, gini=0.4800, peso=0.5000
+  Valor 'Nenhuma': n=5, gini=0.4800, peso=0.5000
+  => Gini médio ponderado de 'Garantia': 0.4800
+  => Ganho de Gini de 'Garantia': 0.0800
+
+Gini do conjunto atual (n=10): 0.5600
+--- 
+ Calculando Gini para o atributo: 'Renda' ---
+  Valor '$0 a $15k': n=2, gini=0.5000, peso=0.2000
+  Valor '$15 a $35k': n=6, gini=0.5000, peso=0.6000
+  Valor 'Acima de $35k': n=2, gini=0.5000, peso=0.2000
+  => Gini médio ponderado de 'Renda': 0.5000
+  => Ganho de Gini de 'Renda': 0.0600
+
+Ganhos de Gini calculados:
+  Historia de Credito: 0.3600
+  Divida: 0.0800
+  Garantia: 0.0800
+  Renda: 0.0600
+=> Atributo escolhido: 'Historia de Credito'
+
+  [Nó] Dividindo por: 'Historia de Credito'
+Gini do conjunto atual (n=10): 0.5600
+┌────────────────────────────────────────────────────────────┐
+│ NÓ: Ramo "1 a 3 anos" → nível 1
+│ Exemplos: n=10  [E3, E12, E16, E17, E18, E21, E23, E26, E29, E30]
+│ Classes: Moderado=6 | Baixo=2 | Alto=2
+│
+│ Gini do conjunto: 0.5600
+│
+│ Ganho de Gini por atributo:
+│   Historia de Credito ........... 0.3600
+│   Divida ........................ 0.0800
+│   Garantia ...................... 0.0800
+│   Renda ......................... 0.0600
+│
+│ ► Atributo escolhido: HISTORIA DE CREDITO (maior ganho)
+└────────────────────────────────────────────────────────────┘
+    -> Valor 'Desconhecida' (n=4)
+    [Folha] Classe única: Moderado
+    -> Valor 'Boa' (n=4)
+Gini do conjunto atual (n=4): 0.5000
+--- 
+ Calculando Gini para o atributo: 'Divida' ---
+  Valor 'Alta': n=2, gini=0.0000, peso=0.5000
+  Valor 'Baixa': n=2, gini=0.0000, peso=0.5000
+  => Gini médio ponderado de 'Divida': 0.0000
+  => Ganho de Gini de 'Divida': 0.5000
+
+Gini do conjunto atual (n=4): 0.5000
+--- 
+ Calculando Gini para o atributo: 'Garantia' ---
+  Valor 'Adequada': n=3, gini=0.4444, peso=0.7500
+  Valor 'Nenhuma': n=1, gini=0.0000, peso=0.2500
+  => Gini médio ponderado de 'Garantia': 0.3333
+  => Ganho de Gini de 'Garantia': 0.1667
+
+Gini do conjunto atual (n=4): 0.5000
+--- 
+ Calculando Gini para o atributo: 'Renda' ---
+  Valor '$15 a $35k': n=3, gini=0.4444, peso=0.7500
+  Valor 'Acima de $35k': n=1, gini=0.0000, peso=0.2500
+  => Gini médio ponderado de 'Renda': 0.3333
+  => Ganho de Gini de 'Renda': 0.1667
+
+Ganhos de Gini calculados:
+  Divida: 0.5000
+  Garantia: 0.1667
+  Renda: 0.1667
+=> Atributo escolhido: 'Divida'
+
+    [Nó] Dividindo por: 'Divida'
+Gini do conjunto atual (n=4): 0.5000
+┌────────────────────────────────────────────────────────────┐
+│ NÓ: Ramo "Boa" → nível 2
+│ Exemplos: n=4  [E12, E16, E21, E30]
+│ Classes: Moderado=2 | Baixo=2
+│
+│ Gini do conjunto: 0.5000
+│
+│ Ganho de Gini por atributo:
+│   Divida ........................ 0.5000
+│   Garantia ...................... 0.1667
+│   Renda ......................... 0.1667
+│
+│ ► Atributo escolhido: DIVIDA (maior ganho)
+└────────────────────────────────────────────────────────────┘
+      -> Valor 'Alta' (n=2)
+      [Folha] Classe única: Moderado
+      -> Valor 'Baixa' (n=2)
+      [Folha] Classe única: Baixo
+    -> Valor 'Ruim' (n=2)
+    [Folha] Classe única: Alto
+  -> Valor 'Acima de 3 anos' (n=10)
+Gini do conjunto atual (n=10): 0.4200
+--- 
+ Calculando Gini para o atributo: 'Historia de Credito' ---
+  Valor 'Boa': n=5, gini=0.3200, peso=0.5000
+  Valor 'Desconhecida': n=3, gini=0.0000, peso=0.3000
+  Valor 'Ruim': n=2, gini=0.0000, peso=0.2000
+  => Gini médio ponderado de 'Historia de Credito': 0.1600
+  => Ganho de Gini de 'Historia de Credito': 0.2600
+
+Gini do conjunto atual (n=10): 0.4200
+--- 
+ Calculando Gini para o atributo: 'Divida' ---
+  Valor 'Alta': n=4, gini=0.5000, peso=0.4000
+  Valor 'Baixa': n=6, gini=0.2778, peso=0.6000
+  => Gini médio ponderado de 'Divida': 0.3667
+  => Ganho de Gini de 'Divida': 0.0533
+
+Gini do conjunto atual (n=10): 0.4200
+--- 
+ Calculando Gini para o atributo: 'Garantia' ---
+  Valor 'Adequada': n=4, gini=0.5000, peso=0.4000
+  Valor 'Nenhuma': n=6, gini=0.2778, peso=0.6000
+  => Gini médio ponderado de 'Garantia': 0.3667
+  => Ganho de Gini de 'Garantia': 0.0533
+
+Gini do conjunto atual (n=10): 0.4200
+--- 
+ Calculando Gini para o atributo: 'Renda' ---
+  Valor '$0 a $15k': n=1, gini=0.0000, peso=0.1000
+  Valor '$15 a $35k': n=2, gini=0.0000, peso=0.2000
+  Valor 'Acima de $35k': n=7, gini=0.4082, peso=0.7000
+  => Gini médio ponderado de 'Renda': 0.2857
+  => Ganho de Gini de 'Renda': 0.1343
+
+Ganhos de Gini calculados:
+  Historia de Credito: 0.2600
+  Divida: 0.0533
+  Garantia: 0.0533
+  Renda: 0.1343
+=> Atributo escolhido: 'Historia de Credito'
+
+  [Nó] Dividindo por: 'Historia de Credito'
+Gini do conjunto atual (n=10): 0.4200
+┌────────────────────────────────────────────────────────────┐
+│ NÓ: Ramo "Acima de 3 anos" → nível 1
+│ Exemplos: n=10  [E5, E6, E8, E9, E10, E13, E22, E24, E27, E28]
+│ Classes: Baixo=7 | Moderado=3
+│
+│ Gini do conjunto: 0.4200
+│
+│ Ganho de Gini por atributo:
+│   Historia de Credito ........... 0.2600
+│   Divida ........................ 0.0533
+│   Garantia ...................... 0.0533
+│   Renda ......................... 0.1343
+│
+│ ► Atributo escolhido: HISTORIA DE CREDITO (maior ganho)
+└────────────────────────────────────────────────────────────┘
+    -> Valor 'Desconhecida' (n=3)
+    [Folha] Classe única: Baixo
+    -> Valor 'Ruim' (n=2)
+    [Folha] Classe única: Moderado
+    -> Valor 'Boa' (n=5)
+Gini do conjunto atual (n=5): 0.3200
+--- 
+ Calculando Gini para o atributo: 'Divida' ---
+  Valor 'Alta': n=3, gini=0.4444, peso=0.6000
+  Valor 'Baixa': n=2, gini=0.0000, peso=0.4000
+  => Gini médio ponderado de 'Divida': 0.2667
+  => Ganho de Gini de 'Divida': 0.0533
+
+Gini do conjunto atual (n=5): 0.3200
+--- 
+ Calculando Gini para o atributo: 'Garantia' ---
+  Valor 'Adequada': n=1, gini=0.0000, peso=0.2000
+  Valor 'Nenhuma': n=4, gini=0.3750, peso=0.8000
+  => Gini médio ponderado de 'Garantia': 0.3000
+  => Ganho de Gini de 'Garantia': 0.0200
+
+Gini do conjunto atual (n=5): 0.3200
+--- 
+ Calculando Gini para o atributo: 'Renda' ---
+  Valor '$0 a $15k': n=1, gini=0.0000, peso=0.2000
+  Valor '$15 a $35k': n=1, gini=0.0000, peso=0.2000
+  Valor 'Acima de $35k': n=3, gini=0.0000, peso=0.6000
+  => Gini médio ponderado de 'Renda': 0.0000
+  => Ganho de Gini de 'Renda': 0.3200
+
+Ganhos de Gini calculados:
+  Divida: 0.0533
+  Garantia: 0.0200
+  Renda: 0.3200
+=> Atributo escolhido: 'Renda'
+
+    [Nó] Dividindo por: 'Renda'
+Gini do conjunto atual (n=5): 0.3200
+┌────────────────────────────────────────────────────────────┐
+│ NÓ: Ramo "Boa" → nível 2
+│ Exemplos: n=5  [E9, E10, E13, E24, E27]
+│ Classes: Baixo=4 | Moderado=1
+│
+│ Gini do conjunto: 0.3200
+│
+│ Ganho de Gini por atributo:
+│   Divida ........................ 0.0533
+│   Garantia ...................... 0.0200
+│   Renda ......................... 0.3200
+│
+│ ► Atributo escolhido: RENDA (maior ganho)
+└────────────────────────────────────────────────────────────┘
+      -> Valor 'Acima de $35k' (n=3)
+      [Folha] Classe única: Baixo
+      -> Valor '$15 a $35k' (n=1)
+      [Folha] Classe única: Baixo
+      -> Valor '$0 a $15k' (n=1)
+      [Folha] Classe única: Moderado
+
+===== ÁRVORE FINAL (CART) =====
+
+[Nó] Atributo: Tempo de Emprego
+  -> Valor 'Menos de 1 ano':
+    [Nó] Atributo: Renda
+      -> Valor '$0 a $15k':
+        [Nó] Atributo: Garantia
+          -> Valor 'Nenhuma':
+            [Nó] Atributo: Historia de Credito
+              -> Valor 'Ruim':
+                [Folha] Classe: Alto
+              -> Valor 'Desconhecida':
+                [Folha] Classe: Alto
+              -> Valor 'Boa':
+                [Nó] Atributo: Divida
+                  -> Valor 'Alta':
+                    [Folha] Classe: Alto
+                  -> Valor 'Baixa':
+                    [Folha] Classe: Moderado
+          -> Valor 'Adequada':
+            [Folha] Classe: Moderado
+      -> Valor '$15 a $35k':
+        [Folha] Classe: Alto
+      -> Valor 'Acima de $35k':
+        [Folha] Classe: Moderado
+  -> Valor '1 a 3 anos':
+    [Nó] Atributo: Historia de Credito
+      -> Valor 'Desconhecida':
+        [Folha] Classe: Moderado
+      -> Valor 'Boa':
+        [Nó] Atributo: Divida
+          -> Valor 'Alta':
+            [Folha] Classe: Moderado
+          -> Valor 'Baixa':
+            [Folha] Classe: Baixo
+      -> Valor 'Ruim':
+        [Folha] Classe: Alto
+  -> Valor 'Acima de 3 anos':
+    [Nó] Atributo: Historia de Credito
+      -> Valor 'Desconhecida':
+        [Folha] Classe: Baixo
+      -> Valor 'Ruim':
+        [Folha] Classe: Moderado
+      -> Valor 'Boa':
+        [Nó] Atributo: Renda
+          -> Valor 'Acima de $35k':
+            [Folha] Classe: Baixo
+          -> Valor '$15 a $35k':
+            [Folha] Classe: Baixo
+          -> Valor '$0 a $15k':
+            [Folha] Classe: Moderado

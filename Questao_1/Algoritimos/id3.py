@@ -206,3 +206,17 @@ class id3:
 
         with open(filepath, "w", encoding="utf-8") as f:
             f.write("\n".join(conteudo))
+
+    def export_pure_tree(self, filepath: str = None) -> str:
+        """Gera apenas a árvore em texto (sem o log de construção).
+
+        Útil como uma das 3 formas de saída/entrada do pipeline: (1) log completo
+        via export_tree, (2) árvore pura via este método, (3) csv de predições
+        via classify_dataset."""
+        texto = "\n".join(self._arvore_texto())
+
+        if filepath:
+            with open(filepath, "w", encoding="utf-8") as f:
+                f.write(texto)
+
+        return texto
