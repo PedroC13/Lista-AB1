@@ -1,0 +1,10 @@
+{
+  "initial_facts": {},
+  "rules": [
+    {"id": "R1", "conditions": [["Historia de Credito", "Ruim"]], "conclusion": ["Risco", "Alto"]},
+    {"id": "R2", "conditions": [["Historia de Credito", "Boa"], ["Divida", "Baixa"], ["Renda", "Acima de 35k"]], "conclusion": ["Risco", "Baixo"]},
+    {"id": "R3", "conditions": [["Historia de Credito", "Boa"], ["Divida", "Alta"]], "conclusion": ["Risco", "Moderado"]},
+    {"id": "R4", "conditions": [["Historia de Credito", "Desconhecida"], ["Garantia", "Adequada"]], "conclusion": ["Risco", "Baixo"]},
+    {"id": "R5", "conditions": [["Historia de Credito", "Desconhecida"], ["Garantia", "Nenhuma"], ["Renda", "0 a 15k"]], "conclusion": ["Risco", "Alto"]}
+  ]
+}
