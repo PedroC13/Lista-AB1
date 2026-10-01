@@ -1,10 +1,341 @@
 {
   "initial_facts": {},
   "rules": [
-    {"id": "R1", "conditions": [["Historia de Credito", "Ruim"]], "conclusion": ["Risco", "Alto"]},
-    {"id": "R2", "conditions": [["Historia de Credito", "Boa"], ["Divida", "Baixa"], ["Renda", "Acima de 35k"]], "conclusion": ["Risco", "Baixo"]},
-    {"id": "R3", "conditions": [["Historia de Credito", "Boa"], ["Divida", "Alta"]], "conclusion": ["Risco", "Moderado"]},
-    {"id": "R4", "conditions": [["Historia de Credito", "Desconhecida"], ["Garantia", "Adequada"]], "conclusion": ["Risco", "Baixo"]},
-    {"id": "R5", "conditions": [["Historia de Credito", "Desconhecida"], ["Garantia", "Nenhuma"], ["Renda", "0 a 15k"]], "conclusion": ["Risco", "Alto"]}
+    {
+      "id": "R1",
+      "conditions": [
+        [
+          "Tempo de Emprego",
+          "Menos de 1 ano"
+        ],
+        [
+          "Renda",
+          "$0 a $15k"
+        ],
+        [
+          "Garantia",
+          "Nenhuma"
+        ],
+        [
+          "Historia de Credito",
+          "Ruim"
+        ]
+      ],
+      "conclusion": [
+        "Risco",
+        "Alto"
+      ]
+    },
+    {
+      "id": "R2",
+      "conditions": [
+        [
+          "Tempo de Emprego",
+          "Menos de 1 ano"
+        ],
+        [
+          "Renda",
+          "$0 a $15k"
+        ],
+        [
+          "Garantia",
+          "Nenhuma"
+        ],
+        [
+          "Historia de Credito",
+          "Desconhecida"
+        ]
+      ],
+      "conclusion": [
+        "Risco",
+        "Alto"
+      ]
+    },
+    {
+      "id": "R3",
+      "conditions": [
+        [
+          "Tempo de Emprego",
+          "Menos de 1 ano"
+        ],
+        [
+          "Renda",
+          "$0 a $15k"
+        ],
+        [
+          "Garantia",
+          "Nenhuma"
+        ],
+        [
+          "Historia de Credito",
+          "Boa"
+        ],
+        [
+          "Divida",
+          "Alta"
+        ]
+      ],
+      "conclusion": [
+        "Risco",
+        "Alto"
+      ]
+    },
+    {
+      "id": "R4",
+      "conditions": [
+        [
+          "Tempo de Emprego",
+          "Menos de 1 ano"
+        ],
+        [
+          "Renda",
+          "$0 a $15k"
+        ],
+        [
+          "Garantia",
+          "Nenhuma"
+        ],
+        [
+          "Historia de Credito",
+          "Boa"
+        ],
+        [
+          "Divida",
+          "Baixa"
+        ]
+      ],
+      "conclusion": [
+        "Risco",
+        "Moderado"
+      ]
+    },
+    {
+      "id": "R5",
+      "conditions": [
+        [
+          "Tempo de Emprego",
+          "Menos de 1 ano"
+        ],
+        [
+          "Renda",
+          "$0 a $15k"
+        ],
+        [
+          "Garantia",
+          "Adequada"
+        ]
+      ],
+      "conclusion": [
+        "Risco",
+        "Moderado"
+      ]
+    },
+    {
+      "id": "R6",
+      "conditions": [
+        [
+          "Tempo de Emprego",
+          "Menos de 1 ano"
+        ],
+        [
+          "Renda",
+          "$15 a $35k"
+        ]
+      ],
+      "conclusion": [
+        "Risco",
+        "Alto"
+      ]
+    },
+    {
+      "id": "R7",
+      "conditions": [
+        [
+          "Tempo de Emprego",
+          "Menos de 1 ano"
+        ],
+        [
+          "Renda",
+          "Acima de $35k"
+        ]
+      ],
+      "conclusion": [
+        "Risco",
+        "Moderado"
+      ]
+    },
+    {
+      "id": "R8",
+      "conditions": [
+        [
+          "Tempo de Emprego",
+          "1 a 3 anos"
+        ],
+        [
+          "Historia de Credito",
+          "Desconhecida"
+        ]
+      ],
+      "conclusion": [
+        "Risco",
+        "Moderado"
+      ]
+    },
+    {
+      "id": "R9",
+      "conditions": [
+        [
+          "Tempo de Emprego",
+          "1 a 3 anos"
+        ],
+        [
+          "Historia de Credito",
+          "Boa"
+        ],
+        [
+          "Divida",
+          "Alta"
+        ]
+      ],
+      "conclusion": [
+        "Risco",
+        "Moderado"
+      ]
+    },
+    {
+      "id": "R10",
+      "conditions": [
+        [
+          "Tempo de Emprego",
+          "1 a 3 anos"
+        ],
+        [
+          "Historia de Credito",
+          "Boa"
+        ],
+        [
+          "Divida",
+          "Baixa"
+        ]
+      ],
+      "conclusion": [
+        "Risco",
+        "Baixo"
+      ]
+    },
+    {
+      "id": "R11",
+      "conditions": [
+        [
+          "Tempo de Emprego",
+          "1 a 3 anos"
+        ],
+        [
+          "Historia de Credito",
+          "Ruim"
+        ]
+      ],
+      "conclusion": [
+        "Risco",
+        "Alto"
+      ]
+    },
+    {
+      "id": "R12",
+      "conditions": [
+        [
+          "Tempo de Emprego",
+          "Acima de 3 anos"
+        ],
+        [
+          "Historia de Credito",
+          "Desconhecida"
+        ]
+      ],
+      "conclusion": [
+        "Risco",
+        "Baixo"
+      ]
+    },
+    {
+      "id": "R13",
+      "conditions": [
+        [
+          "Tempo de Emprego",
+          "Acima de 3 anos"
+        ],
+        [
+          "Historia de Credito",
+          "Ruim"
+        ]
+      ],
+      "conclusion": [
+        "Risco",
+        "Moderado"
+      ]
+    },
+    {
+      "id": "R14",
+      "conditions": [
+        [
+          "Tempo de Emprego",
+          "Acima de 3 anos"
+        ],
+        [
+          "Historia de Credito",
+          "Boa"
+        ],
+        [
+          "Renda",
+          "Acima de $35k"
+        ]
+      ],
+      "conclusion": [
+        "Risco",
+        "Baixo"
+      ]
+    },
+    {
+      "id": "R15",
+      "conditions": [
+        [
+          "Tempo de Emprego",
+          "Acima de 3 anos"
+        ],
+        [
+          "Historia de Credito",
+          "Boa"
+        ],
+        [
+          "Renda",
+          "$15 a $35k"
+        ]
+      ],
+      "conclusion": [
+        "Risco",
+        "Baixo"
+      ]
+    },
+    {
+      "id": "R16",
+      "conditions": [
+        [
+          "Tempo de Emprego",
+          "Acima de 3 anos"
+        ],
+        [
+          "Historia de Credito",
+          "Boa"
+        ],
+        [
+          "Renda",
+          "$0 a $15k"
+        ]
+      ],
+      "conclusion": [
+        "Risco",
+        "Moderado"
+      ]
+    }
   ]
 }

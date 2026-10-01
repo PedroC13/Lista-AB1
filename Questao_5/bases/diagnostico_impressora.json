@@ -1,0 +1,18 @@
+{
+  "initial_facts": {},
+  "rules": [
+    {"id": "D1", "conditions": [["Cabo Conectado", "Nao"]], "conclusion": ["Diagnostico", "Sem Conexao"]},
+    {"id": "D2", "conditions": [["Cabo Conectado", "Sim"], ["Impressora Liga", "Nao"]], "conclusion": ["Diagnostico", "Sem Energia"]},
+    {"id": "D3", "conditions": [["Impressora Liga", "Sim"], ["Papel Atolado", "Sim"]], "conclusion": ["Diagnostico", "Atolamento"]},
+    {"id": "D4", "conditions": [["Impressora Liga", "Sim"], ["Papel Atolado", "Nao"], ["Nivel Tinta", "Baixo"]], "conclusion": ["Diagnostico", "Tinta Baixa"]},
+    {"id": "D5", "conditions": [["Impressora Liga", "Sim"], ["Papel Atolado", "Nao"], ["Nivel Tinta", "Ok"], ["Spooler Travado", "Sim"]], "conclusion": ["Diagnostico", "Fila Travada"]},
+    {"id": "D6", "conditions": [["Impressora Liga", "Sim"], ["Papel Atolado", "Nao"], ["Nivel Tinta", "Ok"], ["Spooler Travado", "Nao"]], "conclusion": ["Diagnostico", "Driver Ou Outro"]},
+
+    {"id": "S1", "conditions": [["Diagnostico", "Sem Conexao"]], "conclusion": ["Solucao", "Verificar cabo USB ou rede"]},
+    {"id": "S2", "conditions": [["Diagnostico", "Sem Energia"]], "conclusion": ["Solucao", "Verificar tomada e botao liga"]},
+    {"id": "S3", "conditions": [["Diagnostico", "Atolamento"]], "conclusion": ["Solucao", "Remover papel preso com a impressora desligada"]},
+    {"id": "S4", "conditions": [["Diagnostico", "Tinta Baixa"]], "conclusion": ["Solucao", "Trocar o cartucho ou toner"]},
+    {"id": "S5", "conditions": [["Diagnostico", "Fila Travada"]], "conclusion": ["Solucao", "Reiniciar o spooler de impressao"]},
+    {"id": "S6", "conditions": [["Diagnostico", "Driver Ou Outro"]], "conclusion": ["Solucao", "Reinstalar o driver da impressora"]}
+  ]
+}
