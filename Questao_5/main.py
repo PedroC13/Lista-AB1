@@ -29,7 +29,7 @@ def show_rules(base):
         condition = " E ".join(f"{a} = {v}" for a, v in r["conditions"])
         print(f"  {r['id']}: SE {condition} ENTAO {r['conclusion'][0]} = {r['conclusion'][1]}")
 
-
+#
 def add_rule(base):
     rule_id = input("Id da regra (ex: R10): ").strip()
     n = int(input("Quantas condições? "))
